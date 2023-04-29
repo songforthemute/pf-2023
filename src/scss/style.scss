@@ -1,0 +1,21 @@
+// This is a variable declaration
+$color: violet;
+
+// This is a mixin definition
+@mixin border($width) {
+    border: $width solid black;
+}
+
+// This is a function definition
+@function square($number) {
+    @return $number * $number;
+}
+
+body {
+    font-size: square(6) + px;
+}
+
+h1 {
+    color: $color;
+    @include border(1px);
+}
