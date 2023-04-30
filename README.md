@@ -6,3 +6,12 @@
 -   Set Javascript minifying configuration
 -   Set SCSS compiling configuation
 -   Set automation script that is compiling process
+
+---
+
+### Day 2:
+
+-   Fix yesterday's scripts
+-   Add Header
+-   Add Intro
+-   Add Carousel(1)
