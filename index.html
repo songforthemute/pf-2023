@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <link>
+    <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +11,13 @@
         />
         <meta name="keywords" content="portfolio, frontend, developer" />
         <title>songforthemtue's Pf</title>
-        <link rel="stylesheet" href="style/index.css"></link>
+        <link rel="stylesheet" href="style/index.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
         <script src="index.js" async></script>
     </head>
     <body>
@@ -22,17 +28,82 @@
             <!-- Right: github | blog | resume svg icon -->
             <!-- hover event -->
             <!-- open in the new tab -->
+            <h3>
+                <button class="header__title">songforthemute</button>
+            </h3>
         </header>
 
         <!-- 메인 부분 -->
         <main>
-            <!-- 1: introduce myself -->
-            <!-- 2: projects carousal -->
+            <article class="intro__box intro__right">
+                <!-- 1: introduce 1 -->
+                <h3 class="intro__heading">안녕하세요.</h3>
+                <p class="intro__paragraph">
+                    저는 섬세하고 집요한,
+                    <br />
+                    프런트엔드 엔지니어
+                    <br />
+                    이주헌입니다.
+                </p>
+            </article>
+            <article class="intro__box intro__left">
+                <!-- 1: introduce 2 -->
+                <p class="intro__paragraph">
+                    디자인 전공을 접목시켜 프런트엔드 개발 역량을 탄탄히
+                    쌓아나갔으며,
+                    <br />
+                    웹 표준과 접근성을 준수하며 12%의 브라우저 성능 향상을 이끈
+                    경험과
+                    <br />
+                    홀로 풀스택 프로젝트를 배포까지 진행한 경험 또한 있습니다.
+                </p>
+            </article>
+
+            <!-- 2: projects carousel -->
+            <div class="carousel" role="region" aria-label="Image carousel">
+                <ul class="carousel__list">
+                    <li class="carousel__item carousel__item--active">
+                        <img
+                            src="imgs/palette.png"
+                            alt="portfolio carousel image 1"
+                        />
+                    </li>
+                    <li class="carousel__item">
+                        <img
+                            src="imgs/galaxyMarket.png"
+                            alt="portfolio carousel image 2"
+                        />
+                    </li>
+                    <li class="carousel__item">
+                        <img
+                            src="imgs/atFlix.png"
+                            alt="portfolio carousel image 3"
+                        />
+                    </li>
+                    <li class="carousel__item">
+                        <img
+                            src="imgs/rello.png"
+                            alt="portfolio carousel image 4"
+                        />
+                    </li>
+                    <li class="carousel__item">
+                        <img
+                            src="imgs/coinTrack.png"
+                            alt="portfolio carousel image 5"
+                        />
+                    </li>
+                </ul>
+
+                <div class="carousel__control">
+                    <button class="carousel__control--prev">Previous</button>
+                    <button class="carousel__control--next">Next</button>
+                </div>
+            </div>
+
             <!-- 3: skill set -->
             <!-- 4: blog articles -->
             <!-- 5: other experiences: TIL, Algorithms, qualification -->
             <!-- 6: top scroll btn -->
-            <span>hddi</span>
         </main>
 
         <!-- 푸터 부분 -->

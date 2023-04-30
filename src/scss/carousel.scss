@@ -1,0 +1,59 @@
+.carousel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.carousel__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.carousel__item {
+    height: 100%;
+    display: none;
+    transition: all 0.5s ease-out;
+}
+
+.carousel__item img {
+    width: 60vw;
+    height: auto;
+}
+
+.carousel__item--active {
+    display: block;
+    animation: fade-in-out 1s ease-out;
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.carousel--control {
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.carousel__control--prev,
+.carousel__control--next {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel__control--prev:hover,
+.carousel__control--next:hover {
+    background-color: #aaa;
+}

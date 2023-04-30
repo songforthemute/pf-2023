@@ -1,0 +1,19 @@
+header {
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+
+.header__title {
+    padding: $size-2;
+    font-size: $size-6;
+    font-weight: $font-bold;
+}
+
+.header__title:hover {
+    transition: opacity 0.5s ease-out;
+    cursor: n-resize;
+    opacity: 0.5;
+}
