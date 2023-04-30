@@ -1,0 +1,1 @@
+console.log("hello world XD");var a=10,b=20;console.log(a+b);
