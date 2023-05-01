@@ -2,6 +2,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    // position: relative;
 }
 
 .carousel__list {
@@ -14,6 +15,7 @@
     height: 100%;
     display: none;
     transition: all 0.5s ease-out;
+    cursor: pointer;
 }
 
 .carousel__item img {
@@ -37,20 +39,31 @@
     }
 }
 
-.carousel--control {
-    bottom: 0;
-    left: 0;
-    right: 0;
+.carousel__control {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
 }
 
 .carousel__control--prev,
 .carousel__control--next {
-    display: block;
-    width: 50px;
-    height: 50px;
+    position: absolute;
+    top: -$size-32;
+    width: $size-20;
+    height: $size-20;
     background-color: #ccc;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.carousel__control--prev {
+    left: $size-4;
+}
+
+.carousel__control--next {
+    right: $size-4;
 }
 
 .carousel__control--prev:hover,

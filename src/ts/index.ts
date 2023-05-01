@@ -27,8 +27,60 @@ const prevButton = document.querySelector(
 const nextButton = document.querySelector(
     ".carousel__control--next"
 ) as HTMLButtonElement;
+
 let carouselIndex = 0;
 let timerId: number;
+
+carouselItems.forEach((carouselItem: HTMLLIElement) => {
+    // carouselItem.addEventListener("dragstart", function (e: DragEvent) {
+    //     console.log(e.clientX, e.clientY);
+    //     console.log(e.dataTransfer);
+
+    //     // store the current position of the cursor
+    //     e.dataTransfer.setData("cursorX", String(e.clientX));
+    //     e.dataTransfer.setData("cursorY", String(e.clientY));
+
+    //     console.log(e.dataTransfer);
+    // });
+
+    // carouselItem.addEventListener("dragover", function (e: DragEvent) {
+    //     e.preventDefault();
+    // });
+
+    carouselItem.addEventListener("drag", function (e: DragEvent) {
+        // const cursorX = +e.dataTransfer.getData("cursorX");
+        // const cursorY = +e.dataTransfer.getData("cursorY");
+
+        // const diffX = e.clientX - cursorX;
+        // const diffY = e.clientX - cursorY;
+
+        // carouselItem.style.left = `${carouselItem.offsetLeft + diffX}px`;
+        // carouselItem.style.top = `${carouselItem.offsetTop + diffY}px`;
+
+        // // update the cursor position
+        // e.dataTransfer.setData("cursorX", `${e.clientX}`);
+        // e.dataTransfer.setData("cursorY", `${e.clientY}`);
+
+        console.log(e);
+
+        const { clientX, offsetX } = e;
+
+        if (clientX == 0) return;
+
+        if (offsetX > 0) {
+            onClickNextCarousel();
+        } else if (offsetX < 0) {
+            onClickPrevCarousel();
+        }
+    });
+
+    // carouselItem.addEventListener("dragend", function (e: DragEvent) {
+    //     console.log(e.dataTransfer.getData("cursorX"));
+    //     console.log(e.dataTransfer.getData("cursorY"));
+
+    //     e.dataTransfer.clearData();
+    // });
+});
 
 function onClickNextCarousel() {
     const prevItem = carouselItems[carouselIndex] as HTMLLIElement;

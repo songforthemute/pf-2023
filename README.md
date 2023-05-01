@@ -15,3 +15,11 @@
 -   Add Header
 -   Add Intro
 -   Add Carousel(1)
+
+---
+
+### Day 3:
+
+-   Fix Layout
+-   Add Carousel's Intro
+-   Add Carousel(2) (drag event)

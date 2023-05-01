@@ -29,13 +29,15 @@
             <!-- hover event -->
             <!-- open in the new tab -->
             <h3>
+                <div></div>
                 <button class="header__title">songforthemute</button>
+                <div></div>
             </h3>
         </header>
 
         <!-- 메인 부분 -->
         <main>
-            <article class="intro__box intro__right">
+            <article class="intro__box intro__left">
                 <!-- 1: introduce 1 -->
                 <h3 class="intro__heading">안녕하세요.</h3>
                 <p class="intro__paragraph">
@@ -46,10 +48,10 @@
                     이주헌입니다.
                 </p>
             </article>
-            <article class="intro__box intro__left">
+            <article class="intro__box intro__right">
                 <!-- 1: introduce 2 -->
                 <p class="intro__paragraph">
-                    디자인 전공을 접목시켜 프런트엔드 개발 역량을 탄탄히
+                    디자인 전공을 접목시켜 웹 프런트엔드 개발 역량을 탄탄히
                     쌓아나갔으며,
                     <br />
                     웹 표준과 접근성을 준수하며 12%의 브라우저 성능 향상을 이끈
@@ -60,33 +62,40 @@
             </article>
 
             <!-- 2: projects carousel -->
+            <h2 class="intro__box intro__left intro__heading">
+                저는 이런 프로젝트 경험도 있습니다.
+            </h2>
             <div class="carousel" role="region" aria-label="Image carousel">
                 <ul class="carousel__list">
-                    <li class="carousel__item carousel__item--active">
+                    <li
+                        draggable="true"
+                        class="carousel__item carousel__item--active"
+                    >
                         <img
+                            draggable="true"
                             src="imgs/palette.png"
                             alt="portfolio carousel image 1"
                         />
                     </li>
-                    <li class="carousel__item">
+                    <li draggable="true" class="carousel__item">
                         <img
                             src="imgs/galaxyMarket.png"
                             alt="portfolio carousel image 2"
                         />
                     </li>
-                    <li class="carousel__item">
+                    <li draggable="true" class="carousel__item">
                         <img
                             src="imgs/atFlix.png"
                             alt="portfolio carousel image 3"
                         />
                     </li>
-                    <li class="carousel__item">
+                    <li draggable="true" class="carousel__item">
                         <img
                             src="imgs/rello.png"
                             alt="portfolio carousel image 4"
                         />
                     </li>
-                    <li class="carousel__item">
+                    <li draggable="true" class="carousel__item">
                         <img
                             src="imgs/coinTrack.png"
                             alt="portfolio carousel image 5"
