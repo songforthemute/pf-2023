@@ -23,3 +23,11 @@
 -   Fix Layout
 -   Add Carousel's Intro
 -   Add Carousel(2) (drag event)
+
+---
+
+### Day 4:
+
+-   Fix SCSS class fields
+-   Delete Carousel drag event
+-   Add Dual Carousel

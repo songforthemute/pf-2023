@@ -11,80 +11,105 @@ function onClickToTop() {
     });
 }
 headerTitle === null || headerTitle === void 0 ? void 0 : headerTitle.addEventListener("click", onClickToTop);
-var carouselList = document.querySelector(".carousel__list");
-var carouselItems = document.querySelectorAll(".carousel__item");
-var prevButton = document.querySelector(".carousel__control--prev");
-var nextButton = document.querySelector(".carousel__control--next");
-var carouselIndex = 0;
-var timerId;
-carouselItems.forEach(function (carouselItem) {
-    // carouselItem.addEventListener("dragstart", function (e: DragEvent) {
-    //     console.log(e.clientX, e.clientY);
-    //     console.log(e.dataTransfer);
-    //     // store the current position of the cursor
-    //     e.dataTransfer.setData("cursorX", String(e.clientX));
-    //     e.dataTransfer.setData("cursorY", String(e.clientY));
-    //     console.log(e.dataTransfer);
-    // });
-    // carouselItem.addEventListener("dragover", function (e: DragEvent) {
-    //     e.preventDefault();
-    // });
-    carouselItem.addEventListener("drag", function (e) {
-        // const cursorX = +e.dataTransfer.getData("cursorX");
-        // const cursorY = +e.dataTransfer.getData("cursorY");
-        // const diffX = e.clientX - cursorX;
-        // const diffY = e.clientX - cursorY;
-        // carouselItem.style.left = `${carouselItem.offsetLeft + diffX}px`;
-        // carouselItem.style.top = `${carouselItem.offsetTop + diffY}px`;
-        // // update the cursor position
-        // e.dataTransfer.setData("cursorX", `${e.clientX}`);
-        // e.dataTransfer.setData("cursorY", `${e.clientY}`);
-        console.log(e);
-        var clientX = e.clientX, offsetX = e.offsetX;
-        if (clientX == 0)
-            return;
-        if (offsetX > 0) {
-            onClickNextCarousel();
-        }
-        else if (offsetX < 0) {
-            onClickPrevCarousel();
-        }
-    });
-    // carouselItem.addEventListener("dragend", function (e: DragEvent) {
-    //     console.log(e.dataTransfer.getData("cursorX"));
-    //     console.log(e.dataTransfer.getData("cursorY"));
-    //     e.dataTransfer.clearData();
-    // });
-});
-function onClickNextCarousel() {
-    var prevItem = carouselItems[carouselIndex];
-    if (++carouselIndex >= carouselItems.length) {
-        carouselIndex = 0;
+var carouselImageControllers = document.querySelector(".carousel__control--image").childNodes;
+var carouselContainerControllers = document.querySelector(".carousel__control--container").childNodes;
+var carouselImageNodes = document.querySelectorAll(".carousel__item--image");
+var carouselContainerNodes = document.querySelectorAll(".carousel__item--container");
+var carouselContainer = {
+    index: 0,
+    imageCount: [3, 6, 5, 4, 4, 4],
+    getCurrentImageCount: function () {
+        return carouselContainer.imageCount[carouselContainer.index];
+    },
+    getLength: function () { return carouselContainer.imageCount.length; },
+    reduceCounts: function (i) {
+        return carouselContainer.imageCount
+            .slice(0, i !== null && i !== void 0 ? i : carouselContainer.imageCount.length)
+            .reduce(function (pre, cur) { return pre + cur; }, 0);
+    },
+};
+var carouselImage = {
+    index: 0,
+    start: 0,
+    end: 0,
+};
+function onClickNextImage() {
+    var prevImage = carouselImageNodes[carouselImage.index];
+    if (++carouselImage.index >= carouselImage.end) {
+        carouselImage.index = carouselImage.start;
     }
-    var nextItem = carouselItems[carouselIndex];
-    // appear next carousel
-    nextItem.classList.add("carousel__item--active");
-    // disappear prev carousel
-    prevItem.classList.remove("carousel__item--active");
+    var nextImage = carouselImageNodes[carouselImage.index];
+    // appear/disappear image
+    nextImage.classList.add("carousel__item--active");
+    prevImage.classList.remove("carousel__item--active");
 }
-function onClickPrevCarousel() {
-    var prevItem = carouselItems[carouselIndex];
-    if (--carouselIndex <= 0) {
-        carouselIndex = carouselItems.length - 1;
+function onClickPrevImage() {
+    var prevImage = carouselImageNodes[carouselImage.index];
+    if (--carouselImage.index < carouselImage.start) {
+        carouselImage.index = carouselImage.end - 1;
     }
-    var nextItem = carouselItems[carouselIndex];
-    // appear prev carousel
-    nextItem.classList.add("carousel__item--active");
-    // disappear current carousel
-    prevItem.classList.remove("carousel__item--active");
+    var nextImage = carouselImageNodes[carouselImage.index];
+    // appear/disappear image
+    nextImage.classList.add("carousel__item--active");
+    prevImage.classList.remove("carousel__item--active");
 }
-prevButton.addEventListener("click", onClickPrevCarousel);
-nextButton.addEventListener("click", onClickNextCarousel);
-// // Function to start the automatic carousel timer
-// function startTimer() {
-//     timerId = setInterval(() => {
-//         nextCarousel();
-//     }, 5000);
-// }
-// // Start the automatic timer
-// startTimer();
+function onClickNextContainer() {
+    // disappear prev image first
+    var prevImage = carouselImageNodes[carouselImage.index];
+    prevImage.classList.remove("carousel__item--active");
+    // disappear prev container
+    var prevContainer = carouselContainerNodes[carouselContainer.index];
+    prevContainer.classList.remove("carousel__item--active");
+    // adjust image && container index: re-calculate image index
+    if (carouselContainer.index === carouselContainer.getLength() - 1) {
+        carouselContainer.index = 0;
+        carouselImage.start = 0;
+        carouselImage.end = carouselContainer.getCurrentImageCount();
+    }
+    else {
+        carouselImage.start += carouselContainer.getCurrentImageCount();
+        carouselContainer.index++;
+        carouselImage.end += carouselContainer.getCurrentImageCount();
+    }
+    carouselImage.index = carouselImage.start;
+    // appear next container
+    var nextContainer = carouselContainerNodes[carouselContainer.index];
+    nextContainer.classList.add("carousel__item--active");
+    // appear next image
+    var nextImage = carouselImageNodes[carouselImage.index];
+    nextImage.classList.add("carousel__item--active");
+}
+function onClickPrevContainer() {
+    // disappear prev image first
+    var prevImage = carouselImageNodes[carouselImage.index];
+    prevImage.classList.remove("carousel__item--active");
+    // disappear prev container
+    var prevContainer = carouselContainerNodes[carouselContainer.index];
+    prevContainer.classList.remove("carousel__item--active");
+    // adjust image index: re-calculate image index
+    if (carouselContainer.index === 0) {
+        carouselContainer.index = carouselContainer.getLength() - 1;
+        carouselImage.start = carouselContainer.reduceCounts(carouselContainer.index);
+        carouselImage.end = carouselContainer.reduceCounts(carouselContainer.getLength());
+    }
+    else {
+        carouselImage.end -= carouselContainer.getCurrentImageCount();
+        carouselContainer.index--;
+        carouselImage.start -= carouselContainer.getCurrentImageCount();
+    }
+    carouselImage.index = carouselImage.start;
+    // appear next container
+    var nextContainer = carouselContainerNodes[carouselContainer.index];
+    nextContainer.classList.add("carousel__item--active");
+    // appear next image
+    var nextImage = carouselImageNodes[carouselImage.index];
+    nextImage.classList.add("carousel__item--active");
+}
+// prev slide button in a image carousel in project
+carouselImageControllers[1].addEventListener("click", onClickPrevImage);
+// next slide button in a image carousel in project
+carouselImageControllers[3].addEventListener("click", onClickNextImage);
+// perv project button in a project carousel
+carouselContainerControllers[1].addEventListener("click", onClickPrevContainer);
+// next project button in a project carousel
+carouselContainerControllers[3].addEventListener("click", onClickNextContainer);

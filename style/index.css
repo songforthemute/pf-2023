@@ -221,25 +221,23 @@ header {
   height: 100%;
   overflow: hidden;
 }
-
 .carousel__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
-.carousel__item {
-  height: 100%;
+.carousel__item--container {
   display: none;
   transition: all 0.5s ease-out;
-  cursor: pointer;
 }
-
-.carousel__item img {
+.carousel__item--image {
+  display: none;
+  transition: all 0.5s ease-out;
+}
+.carousel__item--image > img {
   width: 60vw;
   height: auto;
 }
-
 .carousel__item--active {
   display: block;
   animation: fade-in-out 1s ease-out;
@@ -262,27 +260,27 @@ header {
   align-items: center;
   z-index: 1;
 }
-
-.carousel__control--prev,
-.carousel__control--next {
+.carousel__control--image {
+  top: -6rem;
+}
+.carousel__control--container {
+  top: -10rem;
+}
+.carousel__control--prev, .carousel__control--next {
   position: absolute;
-  top: -8rem;
   width: 5rem;
   height: 5rem;
   background-color: #ccc;
   border-radius: 50%;
   cursor: pointer;
 }
-
+.carousel__control--prev:hover, .carousel__control--next:hover {
+  transition: all 0.5s ease-out;
+  opacity: 0.5;
+}
 .carousel__control--prev {
   left: 1rem;
 }
-
 .carousel__control--next {
   right: 1rem;
-}
-
-.carousel__control--prev:hover,
-.carousel__control--next:hover {
-  background-color: #aaa;
 }
