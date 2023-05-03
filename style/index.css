@@ -144,9 +144,14 @@ button:hover {
 }
 
 * {
-  font-size: 14px;
+  font-size: 2rem;
   font-family: "Gowun Batang", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", serif;
-  color: white;
+  color: #e6f1ff;
+}
+@media (max-width: 480px) {
+  * {
+    font-size: 1rem;
+  }
 }
 
 body {
@@ -166,7 +171,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 2rem;
 }
 
 .loading__active {
@@ -254,6 +258,7 @@ main {
 
 .intro__box {
   margin: 3rem auto;
+  word-break: keep-all;
 }
 .intro__box > span {
   display: block;
@@ -263,12 +268,28 @@ main {
   text-align: center;
 }
 .intro__left {
+  width: 50vw;
   margin-left: 5rem;
   text-align: left;
 }
+@media (max-width: 480px) {
+  .intro__left {
+    width: initial;
+    margin-left: 1rem;
+    margin-right: 2rem;
+  }
+}
 .intro__right {
+  width: 50vw;
   margin-right: 5rem;
   text-align: right;
+}
+@media (max-width: 480px) {
+  .intro__right {
+    width: initial;
+    margin-left: 2rem;
+    margin-right: 1rem;
+  }
 }
 .intro__heading {
   font-size: 2rem;
@@ -279,6 +300,12 @@ main {
   line-height: 3rem;
   font-size: 1.25rem;
   font-weight: 400;
+}
+@media (max-width: 480px) {
+  .intro__paragraph {
+    line-height: 1.5rem;
+    font-size: 0.75rem;
+  }
 }
 
 .carousel {
@@ -303,6 +330,11 @@ main {
   text-align: center;
   column-gap: 1rem;
   color: #8892b0;
+}
+@media (max-width: 480px) {
+  .carousel__heading {
+    font-size: 1.25rem;
+  }
 }
 .carousel__heading > a {
   display: flex;
@@ -374,6 +406,11 @@ main {
   aspect-ratio: 1;
   line-height: 0.5rem;
 }
+@media (max-width: 480px) {
+  .carousel__image--prev, .carousel__image--next {
+    display: none;
+  }
+}
 .carousel__image--prev svg, .carousel__image--next svg {
   width: 4rem;
   height: auto;
@@ -391,6 +428,11 @@ main {
   font-size: 1rem;
   margin: 1rem 2rem;
   word-wrap: break-word;
+}
+@media (max-width: 480px) {
+  .carousel__detail {
+    font-size: 0.75rem;
+  }
 }
 
 @keyframes fade-in-out {

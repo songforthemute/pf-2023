@@ -32,9 +32,12 @@
 
 * {
     font-size: $font-size;
+    @media (max-width: 480px) {
+        font-size: $font-size-mobile;
+    }
     font-family: "Gowun Batang", -apple-system, BlinkMacSystemFont, Roboto,
         "Helvetica Neue", serif;
-    color: white;
+    color: $white;
 }
 
 body {
@@ -54,7 +57,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 $size-8;
+    // margin: 0 $size-8;
 }
 
 @import "loading.scss";

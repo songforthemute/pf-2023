@@ -48,4 +48,5 @@
 -   Deploy the prototype
 -   Fix background offset & size
 -   Add Carousel details
--   cacheing localStorage
+-   caching sessionStorage
+-   Action for mobile environment

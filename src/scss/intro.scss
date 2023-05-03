@@ -1,6 +1,7 @@
 .intro {
     &__box {
         margin: $size-12 auto;
+        word-break: keep-all;
 
         > span {
             display: block;
@@ -13,13 +14,25 @@
     }
 
     &__left {
+        width: 50vw;
         margin-left: $size-20;
         text-align: left;
+        @media (max-width: 480px) {
+            width: initial;
+            margin-left: $size-4;
+            margin-right: $size-8;
+        }
     }
 
     &__right {
+        width: 50vw;
         margin-right: $size-20;
         text-align: right;
+        @media (max-width: 480px) {
+            width: initial;
+            margin-left: $size-8;
+            margin-right: $size-4;
+        }
     }
 
     &__heading {
@@ -32,5 +45,9 @@
         line-height: $size-12;
         font-size: $size-5;
         font-weight: $font-normal;
+        @media (max-width: 480px) {
+            line-height: $size-6;
+            font-size: $size-3;
+        }
     }
 }

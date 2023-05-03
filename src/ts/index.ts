@@ -5,10 +5,10 @@
 // loading & scroll lock/unlock
 const loadingComponent = document.getElementById("loading");
 
-if (window?.localStorage.getItem("isVisited")) {
+if (window?.sessionStorage.getItem("isVisited")) {
     loadingComponent.remove();
 } else {
-    window?.localStorage.setItem("isVisited", "true");
+    window?.sessionStorage.setItem("isVisited", "true");
     const $body = document.querySelector("body");
     $body.style.overflow = "hidden";
 

@@ -3,11 +3,11 @@
 })();
 // loading & scroll lock/unlock
 var loadingComponent = document.getElementById("loading");
-if (window === null || window === void 0 ? void 0 : window.localStorage.getItem("isVisited")) {
+if (window === null || window === void 0 ? void 0 : window.sessionStorage.getItem("isVisited")) {
     loadingComponent.remove();
 }
 else {
-    window === null || window === void 0 ? void 0 : window.localStorage.setItem("isVisited", "true");
+    window === null || window === void 0 ? void 0 : window.sessionStorage.setItem("isVisited", "true");
     var $body_1 = document.querySelector("body");
     $body_1.style.overflow = "hidden";
     setTimeout(function () {
