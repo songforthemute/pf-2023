@@ -1,8 +1,17 @@
 (function () {
     console.log("hello world XD");
 })();
+// loading & scroll lock/unlock
+var loadingComponent = document.getElementById("loading");
+var $body = document.querySelector("body");
+$body.style.overflow = "hidden";
+setTimeout(function () {
+    loadingComponent.remove();
+    $body.style.overflow = "inherit";
+}, 3000);
 // header titie logo
 var $headerTitle = document.querySelector(".header__title");
+// header button: move scroll to the specific position
 var $about = document.getElementById("about");
 var $aboutButton = document.getElementById("header__about");
 $aboutButton.addEventListener("click", function () {

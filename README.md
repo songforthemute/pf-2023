@@ -39,3 +39,10 @@
 -   Fix Carousel Layout
 -   Add Carousel Hyperlinks
 -   Add Header Buttons
+
+---
+
+### Day 6:
+
+-   Add Loading Component w/ Scroll lock/unlock
+-   Deploy the prototype

@@ -41,6 +41,7 @@ body {
     height: 400vh;
     background-image: url("/imgs/background.jpeg");
     background-position: contain;
+    background-position: top;
     backdrop-filter: blur(4px) grayscale(20%) contrast(90%);
     -moz-backdrop-filter: blur(4px) grayscale(20%) contrast(90%);
     -webkit-backdrop-filter: blur(4px) grayscale(20%) contrast(90%);
@@ -56,6 +57,7 @@ main {
     margin: 0 $size-8;
 }
 
+@import "loading.scss";
 @import "header.scss";
 @import "intro.scss";
 @import "carousel.scss";

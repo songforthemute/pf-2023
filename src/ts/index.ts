@@ -2,6 +2,16 @@
     console.log("hello world XD");
 })();
 
+// loading & scroll lock/unlock
+const loadingComponent = document.getElementById("loading");
+const $body = document.querySelector("body");
+$body.style.overflow = "hidden";
+
+setTimeout(() => {
+    loadingComponent.remove();
+    $body.style.overflow = "inherit";
+}, 3000);
+
 // header titie logo
 const $headerTitle = document.querySelector(
     ".header__title"
