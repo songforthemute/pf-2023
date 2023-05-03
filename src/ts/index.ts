@@ -4,13 +4,19 @@
 
 // loading & scroll lock/unlock
 const loadingComponent = document.getElementById("loading");
-const $body = document.querySelector("body");
-$body.style.overflow = "hidden";
 
-setTimeout(() => {
+if (window?.localStorage.getItem("isVisited")) {
     loadingComponent.remove();
-    $body.style.overflow = "inherit";
-}, 3000);
+} else {
+    window?.localStorage.setItem("isVisited", "true");
+    const $body = document.querySelector("body");
+    $body.style.overflow = "hidden";
+
+    setTimeout(() => {
+        loadingComponent.remove();
+        $body.style.overflow = "inherit";
+    }, 3000);
+}
 
 // header titie logo
 const $headerTitle = document.querySelector(

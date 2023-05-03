@@ -17,9 +17,10 @@
         display: flex;
         align-items: center;
         font-size: $size-8;
-        padding: $size-8;
+        margin: $size-4 $size-8;
         text-align: center;
         column-gap: $size-4;
+        color: $slate;
 
         > a {
             display: flex;
@@ -135,6 +136,13 @@
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.9),
                 inset 0 0 10px rgba(255, 255, 255, 0.9);
         }
+    }
+
+    &__detail {
+        color: $lightSlate;
+        font-size: $size-4;
+        margin: $size-4 $size-8;
+        word-wrap: break-word;
     }
 }
 

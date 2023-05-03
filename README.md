@@ -46,3 +46,6 @@
 
 -   Add Loading Component w/ Scroll lock/unlock
 -   Deploy the prototype
+-   Fix background offset & size
+-   Add Carousel details
+-   cacheing localStorage

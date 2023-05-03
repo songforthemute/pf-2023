@@ -3,12 +3,18 @@
 })();
 // loading & scroll lock/unlock
 var loadingComponent = document.getElementById("loading");
-var $body = document.querySelector("body");
-$body.style.overflow = "hidden";
-setTimeout(function () {
+if (window === null || window === void 0 ? void 0 : window.localStorage.getItem("isVisited")) {
     loadingComponent.remove();
-    $body.style.overflow = "inherit";
-}, 3000);
+}
+else {
+    window === null || window === void 0 ? void 0 : window.localStorage.setItem("isVisited", "true");
+    var $body_1 = document.querySelector("body");
+    $body_1.style.overflow = "hidden";
+    setTimeout(function () {
+        loadingComponent.remove();
+        $body_1.style.overflow = "inherit";
+    }, 3000);
+}
 // header titie logo
 var $headerTitle = document.querySelector(".header__title");
 // header button: move scroll to the specific position
