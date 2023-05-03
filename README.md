@@ -31,3 +31,11 @@
 -   Fix SCSS class fields
 -   Delete Carousel drag event
 -   Add Dual Carousel
+
+---
+
+### Day 5:
+
+-   Fix Carousel Layout
+-   Add Carousel Hyperlinks
+-   Add Header Buttons

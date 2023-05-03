@@ -1,31 +1,35 @@
-.intro__box {
-    margin: $size-16 auto;
-    line-height: $size-20;
-}
+.intro {
+    &__box {
+        margin: $size-12 auto;
 
-.intro__left {
-    margin-left: 0;
-    padding-left: $size-16;
-    text-align: left;
-}
+        > span {
+            display: block;
+        }
+    }
 
-.intro__right {
-    margin-right: 0;
-    padding-right: $size-16;
-    text-align: right;
-}
+    &__center {
+        padding: auto;
+        text-align: center;
+    }
 
-.intro__heading {
-    font-size: $size-8;
-}
+    &__left {
+        margin-left: $size-20;
+        text-align: left;
+    }
 
-.intro__heading::first-letter {
-    font-size: $size-16;
-    // font-weight: $font-bold;
-}
+    &__right {
+        margin-right: $size-20;
+        text-align: right;
+    }
 
-.intro__paragraph {
-    line-height: $size-12;
-    font-size: $size-5;
-    font-weight: $font-normal;
+    &__heading {
+        font-size: $size-8;
+        line-height: $size-16;
+    }
+
+    &__paragraph {
+        line-height: $size-12;
+        font-size: $size-5;
+        font-weight: $font-normal;
+    }
 }

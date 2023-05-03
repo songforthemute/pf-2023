@@ -18,59 +18,157 @@
             href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap"
             rel="stylesheet"
         />
-        <script src="index.js" async></script>
+        <script src="index.js" defer></script>
     </head>
     <body>
         <!-- 헤더 부분 -->
-        <header>
+        <header class="header">
             <!-- 2 Columns -->
             <!-- Left: songforthemute && scroll on top -->
             <!-- Right: github | blog | resume svg icon -->
             <!-- hover event -->
             <!-- open in the new tab -->
-            <h3>
-                <div></div>
+
+            <div>
                 <button class="header__title">songforthemute</button>
-                <div></div>
-            </h3>
+            </div>
+            <div>
+                <button id="header__about" class="header__button">about</button>
+                <button id="header__project" class="header__button">
+                    project
+                </button>
+                <button id="header__others" class="header__button">
+                    articles
+                </button>
+                <button id="header__others" class="header__button">
+                    others
+                </button>
+                <button id="header__links" class="header__button">blog</button>
+                <button id="header__links" class="header__button">
+                    github
+                </button>
+            </div>
         </header>
 
         <!-- 메인 부분 -->
         <main>
-            <article class="intro__box intro__left">
+            <div class="intro__box intro__center intro__heading">
                 <!-- 1: introduce 1 -->
-                <h3 class="intro__heading">안녕하세요.</h3>
-                <p class="intro__paragraph">
-                    저는 섬세하고 집요한,
-                    <br />
-                    프런트엔드 엔지니어
-                    <br />
-                    이주헌입니다.
-                </p>
-            </article>
-            <article class="intro__box intro__right">
-                <!-- 1: introduce 2 -->
-                <p class="intro__paragraph">
-                    디자인 전공을 접목시켜 웹 프런트엔드 개발 역량을 탄탄히
-                    쌓아나갔으며,
-                    <br />
-                    웹 표준과 접근성을 준수하며 12%의 브라우저 성능 향상을 이끈
-                    경험과
-                    <br />
-                    홀로 풀스택 프로젝트를 배포까지 진행한 경험 또한 있습니다.
-                </p>
-            </article>
+                <h2>안녕하세요!</h2>
+                <h4>저는 이주헌입니다 :D</h4>
+            </div>
+            <!-- <p class="intro__box intro__paragraph"> -->
+            <!-- 1: introduce 2 -->
+            <p class="intro__box intro__left intro__paragraph">
+                <span
+                    >저는 섬세하고 집요한
+                    <u>프런트엔드 엔지니어</u>입니다.</span
+                >
+                <span>직관적인 사용자 인터페이스와</span>
+                <span>즐거운 사용자 경험을 만드는 것을 좋아합니다.</span>
+            </p>
+            <p class="intro__box intro__right intro__paragraph">
+                <span
+                    >디자인 전공을 접목시켜 프런트엔드 개발 역량을 탄탄히
+                    쌓아나갔으며,</span
+                >
+                <span
+                    >웹 표준과 접근성을 준수하며 12%의 브라우저 성능 향상을 이끈
+                    경험이 있습니다.
+                </span>
+                <span>백엔드 개발 역량 또한 빠트리지 않고 습득하여</span>
+                <span
+                    >홀로 풀스택 프로젝트를 배포까지 진행한 경험도 있습니다.
+                </span>
+            </p>
+            <!-- </p> -->
             <!--  -->
             <!-- 2: projects carousel -->
-            <h2 class="intro__box intro__left intro__heading">
+            <h4 id="about" class="intro__box intro__left intro__paragraph">
                 저는 이런 프로젝트 경험도 있습니다.
-            </h2>
+            </h4>
             <!--  -->
-            <div class="carousel" role="region" aria-label="Image carousel">
+            <div
+                class="carousel"
+                role="region"
+                aria-label="Project image carousel"
+            >
+                <button class="carousel__container--prev">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5"
+                        />
+                    </svg>
+                </button>
+                <button class="carousel__image--prev">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M15.75 19.5L8.25 12l7.5-7.5"
+                        />
+                    </svg>
+                </button>
+
                 <ul class="carousel__list">
                     <li
                         class="carousel__item--container carousel__item--active"
                     >
+                        <h4 class="carousel__heading">
+                            <span>Palette</span>
+                            <a
+                                href="https://palette-pi.vercel.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://github.com/songforthemute/palette"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                                    /></svg
+                            ></a>
+                        </h4>
                         <ul class="carousel__list">
                             <li
                                 class="carousel__item--image carousel__item--active"
@@ -95,6 +193,46 @@
                         </ul>
                     </li>
                     <li class="carousel__item--container">
+                        <h4 class="carousel__heading">
+                            <span>Galaxy Market</span>
+                            <a
+                                href="https://galaxy-market-rose.vercel.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://github.com/songforthemute/galaxy-market"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                                    /></svg
+                            ></a>
+                        </h4>
                         <ul class="carousel__list">
                             <li class="carousel__item--image">
                                 <img
@@ -135,6 +273,46 @@
                         </ul>
                     </li>
                     <li class="carousel__item--container">
+                        <h4 class="carousel__heading">
+                            <span>At Flix</span>
+                            <a
+                                href="https://songforthemute.github.io/at-flix"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://github.com/songforthemute/at-flix"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                                    /></svg
+                            ></a>
+                        </h4>
                         <ul class="carousel__list">
                             <li class="carousel__item--image">
                                 <img
@@ -169,6 +347,46 @@
                         </ul>
                     </li>
                     <li class="carousel__item--container">
+                        <h4 class="carousel__heading">
+                            <span>Rello</span>
+                            <a
+                                href="https://tsrello.netlify.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://github.com/songforthemute/rello"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                                    /></svg
+                            ></a>
+                        </h4>
                         <ul class="carousel__list">
                             <li class="carousel__item--image">
                                 <img
@@ -197,6 +415,46 @@
                         </ul>
                     </li>
                     <li class="carousel__item--container">
+                        <h4 class="carousel__heading">
+                            <span>Coin Track</span>
+                            <a
+                                href="https://track-coin-track.netlify.app"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://github.com/songforthemute/coin_track"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                                    /></svg
+                            ></a>
+                        </h4>
                         <ul class="carousel__list">
                             <li class="carousel__item--image">
                                 <img
@@ -225,6 +483,46 @@
                         </ul>
                     </li>
                     <li class="carousel__item--container">
+                        <h4 class="carousel__heading">
+                            <span>Music Tree</span>
+                            <a
+                                href="https://songforthemute.github.io/musictree"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://github.com/songforthemute/musictree"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                                    /></svg
+                            ></a>
+                        </h4>
                         <ul class="carousel__list">
                             <li class="carousel__item--image">
                                 <img
@@ -254,18 +552,38 @@
                     </li>
                 </ul>
 
-                <div class="carousel__control carousel__control--image">
-                    <button class="carousel__control--prev">Prev Image</button>
-                    <button class="carousel__control--next">Next Image</button>
-                </div>
-                <div class="carousel__control carousel__control--container">
-                    <button class="carousel__control--prev">
-                        Prev Project
-                    </button>
-                    <button class="carousel__control--next">
-                        Next Project
-                    </button>
-                </div>
+                <button class="carousel__image--next">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                        />
+                    </svg>
+                </button>
+                <button class="carousel__container--next">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
+                        />
+                    </svg>
+                </button>
             </div>
 
             <!-- 3: skill set -->

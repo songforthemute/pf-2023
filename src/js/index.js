@@ -2,17 +2,32 @@
     console.log("hello world XD");
 })();
 // header titie logo
-var headerTitle = document.querySelector(".header__title");
+var $headerTitle = document.querySelector(".header__title");
+var $about = document.getElementById("about");
+var $aboutButton = document.getElementById("header__about");
+$aboutButton.addEventListener("click", function () {
+    console.log($about.offsetTop);
+    // console.log($about.scrollHeight);
+    onClickAdjustScroll($about.offsetTop - 100);
+});
 // scrolling go top
-function onClickToTop() {
+function onClickAdjustScroll(value) {
+    if (value === void 0) { value = 0; }
     // Issue: Modern Chromium browsers don't support smooth
     requestAnimationFrame(function () {
-        window === null || window === void 0 ? void 0 : window.scrollTo({ top: 0, behavior: "smooth" });
+        window === null || window === void 0 ? void 0 : window.scrollTo({
+            top: value,
+            behavior: "smooth",
+        });
     });
 }
-headerTitle === null || headerTitle === void 0 ? void 0 : headerTitle.addEventListener("click", onClickToTop);
-var carouselImageControllers = document.querySelector(".carousel__control--image").childNodes;
-var carouselContainerControllers = document.querySelector(".carousel__control--container").childNodes;
+$headerTitle === null || $headerTitle === void 0 ? void 0 : $headerTitle.addEventListener("click", function () {
+    onClickAdjustScroll();
+});
+var $carouselImagePrev = document.querySelector(".carousel__image--prev");
+var $carouselImageNext = document.querySelector(".carousel__image--next");
+var $carouselContainerPrev = document.querySelector(".carousel__container--prev");
+var $carouselContainerNext = document.querySelector(".carousel__container--next");
 var carouselImageNodes = document.querySelectorAll(".carousel__item--image");
 var carouselContainerNodes = document.querySelectorAll(".carousel__item--container");
 var carouselContainer = {
@@ -31,12 +46,16 @@ var carouselContainer = {
 var carouselImage = {
     index: 0,
     start: 0,
-    end: 0,
+    end: carouselContainer.imageCount[0],
 };
 function onClickNextImage() {
     var prevImage = carouselImageNodes[carouselImage.index];
-    if (++carouselImage.index >= carouselImage.end) {
+    // check the limit of the current container
+    if (carouselImage.index === carouselImage.end - 1) {
         carouselImage.index = carouselImage.start;
+    }
+    else {
+        carouselImage.index++;
     }
     var nextImage = carouselImageNodes[carouselImage.index];
     // appear/disappear image
@@ -45,8 +64,12 @@ function onClickNextImage() {
 }
 function onClickPrevImage() {
     var prevImage = carouselImageNodes[carouselImage.index];
-    if (--carouselImage.index < carouselImage.start) {
+    // check the limit of the current container
+    if (carouselImage.index === carouselImage.start) {
         carouselImage.index = carouselImage.end - 1;
+    }
+    else {
+        carouselImage.index--;
     }
     var nextImage = carouselImageNodes[carouselImage.index];
     // appear/disappear image
@@ -106,10 +129,10 @@ function onClickPrevContainer() {
     nextImage.classList.add("carousel__item--active");
 }
 // prev slide button in a image carousel in project
-carouselImageControllers[1].addEventListener("click", onClickPrevImage);
+$carouselImagePrev.addEventListener("click", onClickPrevImage);
 // next slide button in a image carousel in project
-carouselImageControllers[3].addEventListener("click", onClickNextImage);
+$carouselImageNext.addEventListener("click", onClickNextImage);
 // perv project button in a project carousel
-carouselContainerControllers[1].addEventListener("click", onClickPrevContainer);
+$carouselContainerPrev.addEventListener("click", onClickPrevContainer);
 // next project button in a project carousel
-carouselContainerControllers[3].addEventListener("click", onClickNextContainer);
+$carouselContainerNext.addEventListener("click", onClickNextContainer);

@@ -3,26 +3,46 @@
 })();
 
 // header titie logo
-const headerTitle = document.querySelector(
+const $headerTitle = document.querySelector(
     ".header__title"
 ) as HTMLHeadingElement;
 
+// header button: move scroll to the specific position
+const $about = document.getElementById("about");
+const $aboutButton = document.getElementById("header__about");
+$aboutButton.addEventListener("click", () => {
+    console.log($about.offsetTop);
+    // console.log($about.scrollHeight);
+    onClickAdjustScroll($about.offsetTop - 100);
+});
+
 // scrolling go top
-function onClickToTop() {
+function onClickAdjustScroll(value: number = 0) {
     // Issue: Modern Chromium browsers don't support smooth
     requestAnimationFrame(() => {
-        window?.scrollTo({ top: 0, behavior: "smooth" });
+        window?.scrollTo({
+            top: value,
+            behavior: "smooth",
+        });
     });
 }
 
-headerTitle?.addEventListener("click", onClickToTop);
+$headerTitle?.addEventListener("click", () => {
+    onClickAdjustScroll();
+});
 
-const carouselImageControllers = document.querySelector(
-    ".carousel__control--image"
-).childNodes;
-const carouselContainerControllers = document.querySelector(
-    ".carousel__control--container"
-).childNodes;
+const $carouselImagePrev = document.querySelector(
+    ".carousel__image--prev"
+) as HTMLButtonElement;
+const $carouselImageNext = document.querySelector(
+    ".carousel__image--next"
+) as HTMLButtonElement;
+const $carouselContainerPrev = document.querySelector(
+    ".carousel__container--prev"
+) as HTMLButtonElement;
+const $carouselContainerNext = document.querySelector(
+    ".carousel__container--next"
+) as HTMLButtonElement;
 
 const carouselImageNodes = document.querySelectorAll(".carousel__item--image");
 const carouselContainerNodes = document.querySelectorAll(
@@ -43,14 +63,17 @@ const carouselContainer = {
 const carouselImage = {
     index: 0,
     start: 0,
-    end: 0,
+    end: carouselContainer.imageCount[0],
 };
 
 function onClickNextImage() {
     const prevImage = carouselImageNodes[carouselImage.index] as HTMLLIElement;
 
-    if (++carouselImage.index >= carouselImage.end) {
+    // check the limit of the current container
+    if (carouselImage.index === carouselImage.end - 1) {
         carouselImage.index = carouselImage.start;
+    } else {
+        carouselImage.index++;
     }
 
     const nextImage = carouselImageNodes[carouselImage.index] as HTMLLIElement;
@@ -63,8 +86,11 @@ function onClickNextImage() {
 function onClickPrevImage() {
     const prevImage = carouselImageNodes[carouselImage.index] as HTMLLIElement;
 
-    if (--carouselImage.index < carouselImage.start) {
+    // check the limit of the current container
+    if (carouselImage.index === carouselImage.start) {
         carouselImage.index = carouselImage.end - 1;
+    } else {
+        carouselImage.index--;
     }
 
     const nextImage = carouselImageNodes[carouselImage.index] as HTMLLIElement;
@@ -149,23 +175,11 @@ function onClickPrevContainer() {
 }
 
 // prev slide button in a image carousel in project
-(carouselImageControllers[1] as HTMLLIElement).addEventListener(
-    "click",
-    onClickPrevImage
-);
+$carouselImagePrev.addEventListener("click", onClickPrevImage);
 // next slide button in a image carousel in project
-(carouselImageControllers[3] as HTMLLIElement).addEventListener(
-    "click",
-    onClickNextImage
-);
+$carouselImageNext.addEventListener("click", onClickNextImage);
 
 // perv project button in a project carousel
-(carouselContainerControllers[1] as HTMLLIElement).addEventListener(
-    "click",
-    onClickPrevContainer
-);
+$carouselContainerPrev.addEventListener("click", onClickPrevContainer);
 // next project button in a project carousel
-(carouselContainerControllers[3] as HTMLLIElement).addEventListener(
-    "click",
-    onClickNextContainer
-);
+$carouselContainerNext.addEventListener("click", onClickNextContainer);

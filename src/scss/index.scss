@@ -38,9 +38,12 @@
 }
 
 body {
-    height: 300vh;
+    height: 280vh;
     background-image: url("/imgs/bg.jpeg");
-    background-position: contain bottom;
+    background-position: contain;
+    backdrop-filter: blur(4px) grayscale(20%) contrast(90%);
+    -moz-backdrop-filter: blur(4px) grayscale(20%) contrast(90%);
+    -webkit-backdrop-filter: blur(4px) grayscale(20%) contrast(90%);
     position: relative;
     line-height: 1.6rem;
 }
