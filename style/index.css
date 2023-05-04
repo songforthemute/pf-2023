@@ -241,6 +241,11 @@ main {
   position: sticky;
   top: 0;
 }
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+  }
+}
 .header__title {
   padding: 0.5rem;
   font-size: 1.5rem;
@@ -251,15 +256,27 @@ main {
   cursor: n-resize;
   opacity: 0.5;
 }
+.header > section {
+  text-align: center;
+}
+@media (max-width: 480px) {
+  .header > section {
+    display: flex;
+  }
+}
 .header__button {
   font-family: "Gowun Batang", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", serif;
   font-size: 1rem;
-  margin: 0.1rem;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   text-decoration: underline;
   text-underline-offset: 0.25rem;
   text-decoration-thickness: 0.05rem;
+}
+@media (max-width: 480px) {
+  .header__button {
+    padding: 0.5rem;
+  }
 }
 .header__button:hover, .header__button:focus {
   transition: all 0.5s ease-out;
@@ -281,13 +298,13 @@ main {
   }
 }
 .intro__box--bold {
-  font-weight: 600;
+  font-weight: 700;
 }
 .intro__box > span {
   display: block;
 }
 .intro__center {
-  padding: auto;
+  margin: auto;
   text-align: center;
 }
 .intro__left {
@@ -299,7 +316,6 @@ main {
   .intro__left {
     width: initial;
     margin-left: 1rem;
-    margin-right: 2rem;
   }
 }
 .intro__right {
@@ -310,7 +326,6 @@ main {
 @media (max-width: 480px) {
   .intro__right {
     width: initial;
-    margin-left: 2rem;
     margin-right: 1rem;
   }
 }

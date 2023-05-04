@@ -21,7 +21,7 @@
     }
 
     &__center {
-        padding: auto;
+        margin: auto;
         text-align: center;
     }
 
@@ -32,7 +32,7 @@
         @media (max-width: 480px) {
             width: initial;
             margin-left: $size-4;
-            margin-right: $size-8;
+            // margin-right: $size-8;
         }
     }
 
@@ -42,7 +42,7 @@
         text-align: right;
         @media (max-width: 480px) {
             width: initial;
-            margin-left: $size-8;
+            // margin-left: $size-8;
             margin-right: $size-4;
         }
     }
