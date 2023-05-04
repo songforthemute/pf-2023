@@ -17,13 +17,21 @@ else {
 }
 // header titie logo
 var $headerTitle = document.querySelector(".header__title");
-// header button: move scroll to the specific position
-var $about = document.getElementById("about");
-var $aboutButton = document.getElementById("header__about");
-$aboutButton.addEventListener("click", function () {
-    console.log($about.offsetTop);
-    // console.log($about.scrollHeight);
-    onClickAdjustScroll($about.offsetTop - 100);
+// header buttons: move scroll to the specific position
+var $aboutSection = document.getElementById("about");
+var $headerAboutButton = document.getElementById("header__about");
+$headerAboutButton.addEventListener("click", function () {
+    onClickAdjustScroll($aboutSection.offsetTop - 200);
+});
+var $projectSection = document.getElementById("project");
+var $headerProjectButton = document.getElementById("header__project");
+$headerProjectButton.addEventListener("click", function () {
+    onClickAdjustScroll($projectSection.offsetTop - 100);
+});
+var $articleSection = document.getElementById("article");
+var $headerArticleButton = document.getElementById("header__article");
+$headerArticleButton.addEventListener("click", function () {
+    onClickAdjustScroll($articleSection.offsetTop - 200);
 });
 // scrolling go top
 function onClickAdjustScroll(value) {
@@ -41,10 +49,10 @@ $headerTitle === null || $headerTitle === void 0 ? void 0 : $headerTitle.addEven
 });
 var $carouselImagePrev = document.querySelector(".carousel__image--prev");
 var $carouselImageNext = document.querySelector(".carousel__image--next");
-var $carouselContainerPrev = document.querySelector(".carousel__container--prev");
-var $carouselContainerNext = document.querySelector(".carousel__container--next");
+var $carouselContainerPrev = document.querySelector(".carousel__project--prev");
+var $carouselContainerNext = document.querySelector(".carousel__project--next");
 var carouselImageNodes = document.querySelectorAll(".carousel__item--image");
-var carouselContainerNodes = document.querySelectorAll(".carousel__item--container");
+var carouselBoxNodes = document.querySelectorAll(".carousel__item--box");
 var carouselContainer = {
     index: 0,
     imageCount: [3, 6, 5, 4, 4, 4],
@@ -96,7 +104,7 @@ function onClickNextContainer() {
     var prevImage = carouselImageNodes[carouselImage.index];
     prevImage.classList.remove("carousel__item--active");
     // disappear prev container
-    var prevContainer = carouselContainerNodes[carouselContainer.index];
+    var prevContainer = carouselBoxNodes[carouselContainer.index];
     prevContainer.classList.remove("carousel__item--active");
     // adjust image && container index: re-calculate image index
     if (carouselContainer.index === carouselContainer.getLength() - 1) {
@@ -111,7 +119,7 @@ function onClickNextContainer() {
     }
     carouselImage.index = carouselImage.start;
     // appear next container
-    var nextContainer = carouselContainerNodes[carouselContainer.index];
+    var nextContainer = carouselBoxNodes[carouselContainer.index];
     nextContainer.classList.add("carousel__item--active");
     // appear next image
     var nextImage = carouselImageNodes[carouselImage.index];
@@ -122,7 +130,7 @@ function onClickPrevContainer() {
     var prevImage = carouselImageNodes[carouselImage.index];
     prevImage.classList.remove("carousel__item--active");
     // disappear prev container
-    var prevContainer = carouselContainerNodes[carouselContainer.index];
+    var prevContainer = carouselBoxNodes[carouselContainer.index];
     prevContainer.classList.remove("carousel__item--active");
     // adjust image index: re-calculate image index
     if (carouselContainer.index === 0) {
@@ -137,7 +145,7 @@ function onClickPrevContainer() {
     }
     carouselImage.index = carouselImage.start;
     // appear next container
-    var nextContainer = carouselContainerNodes[carouselContainer.index];
+    var nextContainer = carouselBoxNodes[carouselContainer.index];
     nextContainer.classList.add("carousel__item--active");
     // appear next image
     var nextImage = carouselImageNodes[carouselImage.index];

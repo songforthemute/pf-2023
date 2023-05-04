@@ -44,22 +44,35 @@
                 <button id="header__project" class="header__button">
                     project
                 </button>
-                <button id="header__others" class="header__button">
-                    articles
+                <button id="header__article" class="header__button">
+                    article
                 </button>
-                <button id="header__others" class="header__button">
-                    others
-                </button>
-                <button id="header__links" class="header__button">blog</button>
-                <button id="header__links" class="header__button">
+                <button id="header__skill" class="header__button">skill</button>
+                <a
+                    href="https://medium.com/@songforthemute"
+                    rel="noopener noreferrer"
+                    id="header__blog"
+                    class="header__button"
+                    target="_blank"
+                    tabindex="0"
+                    >blog</a
+                >
+                <a
+                    href="https://github.com/songforthemute"
+                    rel="noopener noreferrer"
+                    id="header__github"
+                    class="header__button"
+                    target="_blank"
+                    tabindex="0"
+                >
                     github
-                </button>
+                </a>
             </section>
         </header>
 
         <!-- 메인 부분 -->
         <main>
-            <section class="intro__box intro__center intro__heading">
+            <section id="about" class="intro__box intro__center intro__heading">
                 <!-- 1: introduce 1 -->
                 <h2>안녕하세요!</h2>
                 <h4>저는 이주헌입니다 :D</h4>
@@ -85,16 +98,16 @@
             <!-- </p> -->
             <!--  -->
             <!-- 2: projects carousel -->
-            <h4 id="about" class="intro__box intro__left intro__paragraph">
+            <h4 id="project" class="intro__box intro__left intro__box--bold">
                 저는 이런 프로젝트 경험도 있습니다.
             </h4>
             <!--  -->
-            <div
+            <section
                 class="carousel"
                 role="region"
                 aria-label="Project image carousel"
             >
-                <button class="carousel__container--prev">
+                <button class="carousel__project--prev">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -127,15 +140,14 @@
                 </button>
 
                 <ul class="carousel__list">
-                    <li
-                        class="carousel__item--container carousel__item--active"
-                    >
+                    <li class="carousel__item--box carousel__item--active">
                         <h4 class="carousel__heading">
                             <span>Palette</span>
                             <a
                                 href="https://palette-pi.vercel.app"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                tabindex="0"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -155,6 +167,7 @@
                                 href="https://github.com/songforthemute/palette"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                tabindex="0"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -197,13 +210,14 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="carousel__item--container">
+                    <li class="carousel__item--box">
                         <h4 class="carousel__heading">
                             <span>Galaxy Market</span>
                             <a
                                 href="https://galaxy-market-rose.vercel.app"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                tabindex="0"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -223,6 +237,7 @@
                                 href="https://github.com/songforthemute/galaxy-market"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                tabindex="0"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -281,13 +296,14 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="carousel__item--container">
+                    <li class="carousel__item--box">
                         <h4 class="carousel__heading">
                             <span>At Flix</span>
                             <a
                                 href="https://songforthemute.github.io/at-flix"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                tabindex="0"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -307,6 +323,7 @@
                                 href="https://github.com/songforthemute/at-flix"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                tabindex="0"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -359,13 +376,14 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="carousel__item--container">
+                    <li class="carousel__item--box">
                         <h4 class="carousel__heading">
                             <span>Rello</span>
                             <a
                                 href="https://tsrello.netlify.app"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                tabindex="0"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -385,6 +403,7 @@
                                 href="https://github.com/songforthemute/rello"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                tabindex="0"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -431,13 +450,14 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="carousel__item--container">
+                    <li class="carousel__item--box">
                         <h4 class="carousel__heading">
                             <span>Coin Track</span>
                             <a
                                 href="https://track-coin-track.netlify.app"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                tabindex="0"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -457,6 +477,7 @@
                                 href="https://github.com/songforthemute/coin_track"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                tabindex="0"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -503,13 +524,14 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="carousel__item--container">
+                    <li class="carousel__item--box">
                         <h4 class="carousel__heading">
                             <span>Music Tree</span>
                             <a
                                 href="https://songforthemute.github.io/musictree"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                tabindex="0"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -529,6 +551,7 @@
                                 href="https://github.com/songforthemute/musictree"
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                tabindex="0"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -593,7 +616,7 @@
                         />
                     </svg>
                 </button>
-                <button class="carousel__container--next">
+                <button class="carousel__project--next">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -609,7 +632,56 @@
                         />
                     </svg>
                 </button>
-            </div>
+            </section>
+
+            <h4 id="article" class="intro__box intro__left intro__box--bold">
+                저는 경험으로 배운 것을 기록으로 남기고 있어요.
+            </h4>
+
+            <section class="">
+                <ul class="article__box">
+                    <li class="article__item">
+                        <a
+                            href="https://medium.com/@songforthemute/difference-http-keep-alive-websocket-c0cc19eda40"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="0"
+                        >
+                            HTTP Keep Alive와 WebSocket의 차이
+                        </a>
+                    </li>
+                    <li class="article__item">
+                        <a
+                            href="https://medium.com/@songforthemute/configure-typescript-dev-environment-w-code-npm-9d17695ab3a6"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="0"
+                        >
+                            Typescript 개발 환경 설정하기
+                        </a>
+                    </li>
+                    <li class="article__item">
+                        <a
+                            href="https://medium.com/@songforthemute/env-variables-are-undefined-in-next-js-57b55d0ffc71"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="0"
+                        >
+                            Next.js 클라이언트 사이드 환경 변수 설정하기
+                        </a>
+                    </li>
+                    <li class="article__item">
+                        <a
+                            href="https://medium.com/@songforthemute/generic-arrow-function-in-tsx-111e5824ac47"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="0"
+                        >
+                            화살표 함수의 제네릭 in .tsx
+                        </a>
+                    </li>
+                </ul>
+            </section>
 
             <!-- 3: skill set -->
             <!-- 4: blog articles -->

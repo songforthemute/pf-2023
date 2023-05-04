@@ -50,3 +50,11 @@
 -   Add Carousel details
 -   caching sessionStorage
 -   Action for mobile environment
+
+---
+
+### Day 7:
+
+-   Fix action for mobile environment
+-   Add Article section
+-   Add about/project/article/blog/github button's link

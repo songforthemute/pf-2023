@@ -128,12 +128,19 @@ table {
     border-spacing: 0;
 }
 
+a {
+    outline: none;
+}
+
 button {
     outline: none;
     border: none;
     background-color: transparent;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
-button:hover {
-    cursor: pointer;
+li {
+    list-style: none;
 }

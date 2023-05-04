@@ -1,0 +1,33 @@
+.article {
+    &__box {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        row-gap: $size-8;
+    }
+
+    &__item {
+        font-size: $size-5;
+        list-style-color: $lightSlate;
+        &::before {
+            content: "\2022";
+            color: $lightSlate;
+        }
+        // background-color: $slate;
+
+        > a {
+            color: $lightSlate;
+            text-decoration: none;
+
+            &:hover,
+            &:focus {
+                transition: all 0.5s ease-out;
+                color: $lightestSlate;
+                text-shadow: 0 0 10px $white;
+                padding-left: $size-6;
+            }
+        }
+    }
+}

@@ -1,7 +1,18 @@
 .intro {
     &__box {
         margin: $size-12 auto;
+        margin-top: $size-20;
         word-break: keep-all;
+        line-height: $font-size + $size-4;
+
+        @media (max-width: 480px) {
+            margin: $size-6 auto;
+            margin-top: $size-10;
+        }
+
+        &__bold {
+            font-weight: $font-bold;
+        }
 
         > span {
             display: block;
@@ -46,8 +57,8 @@
         font-size: $size-5;
         font-weight: $font-normal;
         @media (max-width: 480px) {
-            line-height: $size-6;
-            font-size: $size-3;
+            line-height: $size-8;
+            font-size: $size-4;
         }
     }
 }

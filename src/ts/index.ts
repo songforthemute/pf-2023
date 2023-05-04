@@ -23,13 +23,21 @@ const $headerTitle = document.querySelector(
     ".header__title"
 ) as HTMLHeadingElement;
 
-// header button: move scroll to the specific position
-const $about = document.getElementById("about");
-const $aboutButton = document.getElementById("header__about");
-$aboutButton.addEventListener("click", () => {
-    console.log($about.offsetTop);
-    // console.log($about.scrollHeight);
-    onClickAdjustScroll($about.offsetTop - 100);
+// header buttons: move scroll to the specific position
+const $aboutSection = document.getElementById("about");
+const $headerAboutButton = document.getElementById("header__about");
+$headerAboutButton.addEventListener("click", () => {
+    onClickAdjustScroll($aboutSection.offsetTop - 200);
+});
+const $projectSection = document.getElementById("project");
+const $headerProjectButton = document.getElementById("header__project");
+$headerProjectButton.addEventListener("click", () => {
+    onClickAdjustScroll($projectSection.offsetTop - 100);
+});
+const $articleSection = document.getElementById("article");
+const $headerArticleButton = document.getElementById("header__article");
+$headerArticleButton.addEventListener("click", () => {
+    onClickAdjustScroll($articleSection.offsetTop - 200);
 });
 
 // scrolling go top
@@ -54,16 +62,14 @@ const $carouselImageNext = document.querySelector(
     ".carousel__image--next"
 ) as HTMLButtonElement;
 const $carouselContainerPrev = document.querySelector(
-    ".carousel__container--prev"
+    ".carousel__project--prev"
 ) as HTMLButtonElement;
 const $carouselContainerNext = document.querySelector(
-    ".carousel__container--next"
+    ".carousel__project--next"
 ) as HTMLButtonElement;
 
 const carouselImageNodes = document.querySelectorAll(".carousel__item--image");
-const carouselContainerNodes = document.querySelectorAll(
-    ".carousel__item--container"
-);
+const carouselBoxNodes = document.querySelectorAll(".carousel__item--box");
 
 const carouselContainer = {
     index: 0,
@@ -122,7 +128,7 @@ function onClickNextContainer() {
     prevImage.classList.remove("carousel__item--active");
 
     // disappear prev container
-    const prevContainer = carouselContainerNodes[
+    const prevContainer = carouselBoxNodes[
         carouselContainer.index
     ] as HTMLLIElement;
     prevContainer.classList.remove("carousel__item--active");
@@ -140,7 +146,7 @@ function onClickNextContainer() {
     carouselImage.index = carouselImage.start;
 
     // appear next container
-    const nextContainer = carouselContainerNodes[
+    const nextContainer = carouselBoxNodes[
         carouselContainer.index
     ] as HTMLLIElement;
     nextContainer.classList.add("carousel__item--active");
@@ -156,7 +162,7 @@ function onClickPrevContainer() {
     prevImage.classList.remove("carousel__item--active");
 
     // disappear prev container
-    const prevContainer = carouselContainerNodes[
+    const prevContainer = carouselBoxNodes[
         carouselContainer.index
     ] as HTMLLIElement;
     prevContainer.classList.remove("carousel__item--active");
@@ -180,7 +186,7 @@ function onClickPrevContainer() {
     carouselImage.index = carouselImage.start;
 
     // appear next container
-    const nextContainer = carouselContainerNodes[
+    const nextContainer = carouselBoxNodes[
         carouselContainer.index
     ] as HTMLLIElement;
     nextContainer.classList.add("carousel__item--active");
