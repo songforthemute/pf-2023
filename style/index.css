@@ -188,7 +188,7 @@ main {
   align-items: center;
   background-color: black;
   color: #ccd6f6;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
   font-weight: 200;
   line-height: 6rem;
@@ -252,7 +252,9 @@ main {
   opacity: 0.5;
 }
 .header__button {
+  font-family: "Gowun Batang", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", serif;
   font-size: 1rem;
+  margin: 0.1rem;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   text-decoration: underline;
@@ -269,16 +271,17 @@ main {
   margin: 3rem auto;
   margin-top: 5rem;
   word-break: keep-all;
-  line-height: 3rem;
+  line-height: 2.5rem;
 }
 @media (max-width: 480px) {
   .intro__box {
+    line-height: 1.75rem;
     margin: 1.5rem auto;
     margin-top: 2.5rem;
   }
 }
-.intro__box__bold {
-  font-weight: 700;
+.intro__box--bold {
+  font-weight: 600;
 }
 .intro__box > span {
   display: block;
@@ -400,6 +403,7 @@ main {
   border-radius: 100%;
   aspect-ratio: 1;
   line-height: 0.5rem;
+  padding: 0.5rem;
 }
 .carousel__project--prev svg, .carousel__project--next svg {
   width: 3rem;

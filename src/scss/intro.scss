@@ -3,14 +3,15 @@
         margin: $size-12 auto;
         margin-top: $size-20;
         word-break: keep-all;
-        line-height: $font-size + $size-4;
+        line-height: $font-size + $size-2;
 
         @media (max-width: 480px) {
+            line-height: $font-size-mobile + $size-2;
             margin: $size-6 auto;
             margin-top: $size-10;
         }
 
-        &__bold {
+        &--bold {
             font-weight: $font-bold;
         }
 
