@@ -314,8 +314,8 @@ main {
 }
 @media (max-width: 480px) {
   .intro__left {
-    width: initial;
-    margin-left: 1rem;
+    width: 80vw;
+    margin-left: 2rem;
   }
 }
 .intro__right {
@@ -325,8 +325,8 @@ main {
 }
 @media (max-width: 480px) {
   .intro__right {
-    width: initial;
-    margin-right: 1rem;
+    width: 85vw;
+    margin-right: 2rem;
   }
 }
 .intro__heading {

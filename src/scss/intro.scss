@@ -30,8 +30,8 @@
         margin-left: $size-20;
         text-align: left;
         @media (max-width: 480px) {
-            width: initial;
-            margin-left: $size-4;
+            width: 80vw;
+            margin-left: $size-8;
             // margin-right: $size-8;
         }
     }
@@ -41,9 +41,9 @@
         margin-right: $size-20;
         text-align: right;
         @media (max-width: 480px) {
-            width: initial;
+            width: 85vw;
             // margin-left: $size-8;
-            margin-right: $size-4;
+            margin-right: $size-8;
         }
     }
 
