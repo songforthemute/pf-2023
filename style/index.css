@@ -151,9 +151,13 @@ li {
   list-style: none;
 }
 
+img {
+  box-sizing: border-box;
+}
+
 * {
   font-size: 2rem;
-  font-family: "Gowun Batang", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", serif;
+  font-family: "Nanum Gothic", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
   color: #e6f1ff;
 }
 @media (max-width: 480px) {
@@ -265,7 +269,7 @@ main {
   }
 }
 .header__button {
-  font-family: "Gowun Batang", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", serif;
+  font-family: "Nanum Gothic", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
   font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
@@ -518,6 +522,7 @@ main {
   justify-content: start;
   align-items: start;
   row-gap: 2rem;
+  margin-bottom: 5rem;
 }
 .article__item {
   font-size: 1.25rem;
@@ -527,11 +532,11 @@ main {
   content: "•";
   color: #a8b2d1;
 }
-.article__item > a {
+.article__item--row {
   color: #a8b2d1;
   text-decoration: none;
 }
-.article__item > a:hover, .article__item > a:focus {
+.article__item--row:hover, .article__item--row:focus {
   transition: all 0.5s ease-out;
   color: #ccd6f6;
   text-shadow: 0 0 10px #e6f1ff;

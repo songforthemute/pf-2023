@@ -15,7 +15,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap"
             rel="stylesheet"
         />
         <script src="index.js" defer></script>
@@ -72,41 +72,52 @@
 
         <!-- 메인 부분 -->
         <main>
-            <section id="about" class="intro__box intro__center intro__heading">
+            <section
+                id="about"
+                class="intro__box intro__center intro__heading"
+                aria-label="Introduce 1"
+                aria-details="This is the introduce myself 1"
+            >
                 <!-- 1: introduce 1 -->
                 <h2>안녕하세요!</h2>
-                <h4>저는 이주헌입니다 :D</h4>
+                <h4>저는 <u>이주헌</u>입니다 :D</h4>
             </section>
             <!-- <p class="intro__box intro__paragraph"> -->
             <!-- 1: introduce 2 -->
-            <section class="intro__box intro__right intro__paragraph">
-                <span>저는 섬세하고 집요한</span
+            <section
+                class="intro__box intro__right intro__paragraph"
+                aria-label="Introduce 2"
+                aria-details="This is the introduce myself 2"
+            >
+                <span>저는 섬세하고 집요한,</span>
+                <span>직관적인 UI와</span><span>기억에 남는 UX를 만드는</span
                 ><span><u>프런트엔드 엔지니어</u>입니다.</span>
-                <span>직관적인 UI와 기억에 남는 UX를</span
-                ><span>만드는 것을 좋아합니다.</span>
             </section>
-            <section class="intro__box intro__left intro__paragraph">
+            <section
+                class="intro__box intro__left intro__paragraph"
+                aria-label="Introduce 3"
+                aria-details="This is the introduce myself 3"
+            >
                 <span
                     >디자인 전공을 접목시켜 프런트엔드 개발 역량을 탄탄히
                     쌓아나갔으며, 웹 표준과 접근성을 준수하며 12%의 브라우저
-                    성능 향상을 이끈 경험이 있습니다.</span
-                >
-                <span
-                    >또한, 백엔드 개발 역량 또한 빠트리지 않고 습득하여 홀로
-                    풀스택 프로젝트를 배포까지 진행한 경험도 있습니다.</span
+                    성능 향상을 이끈 경험이 있습니다. 또한, 백엔드 개발 역량
+                    또한 빠트리지 않고 습득하여 홀로 풀스택 프로젝트를 배포까지
+                    진행한 경험도 있습니다.</span
                 >
             </section>
             <!-- </p> -->
             <!--  -->
             <!-- 2: projects carousel -->
             <h4 id="project" class="intro__box intro__left">
-                저는 이런 프로젝트 경험도 있습니다.
+                저는 이런 <u>프로젝트</u> 경험도 있습니다.
             </h4>
             <!--  -->
             <section
                 class="carousel"
                 role="region"
                 aria-label="Project image carousel"
+                aria-details="This is the carousel of my projects."
             >
                 <button class="carousel__project--prev">
                     <svg
@@ -636,13 +647,17 @@
             </section>
 
             <h4 id="article" class="intro__box intro__left">
-                저는 경험으로 배운 것을 기록으로 남기고 있어요.
+                저는 경험으로 배운 것을 <u>기록</u>으로 남기고 있어요.
             </h4>
 
-            <section class="">
+            <section
+                aria-label="Articles"
+                aria-details="This is the recorded articles that earned by my experience."
+            >
                 <ul class="article__box">
                     <li class="article__item">
                         <a
+                            class="article__item--row"
                             href="https://medium.com/@songforthemute/difference-http-keep-alive-websocket-c0cc19eda40"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -653,6 +668,7 @@
                     </li>
                     <li class="article__item">
                         <a
+                            class="article__item--row"
                             href="https://medium.com/@songforthemute/configure-typescript-dev-environment-w-code-npm-9d17695ab3a6"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -663,6 +679,7 @@
                     </li>
                     <li class="article__item">
                         <a
+                            class="article__item--row"
                             href="https://medium.com/@songforthemute/env-variables-are-undefined-in-next-js-57b55d0ffc71"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -673,6 +690,7 @@
                     </li>
                     <li class="article__item">
                         <a
+                            class="article__item--row"
                             href="https://medium.com/@songforthemute/generic-arrow-function-in-tsx-111e5824ac47"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -684,8 +702,44 @@
                 </ul>
             </section>
 
-            <!-- 3: skill set -->
-            <!-- 4: blog articles -->
+            <h4 id="skill" class="intro__box intro__left">
+                저는 이런 <u>기술</u>을 사용할 수 있어요.
+            </h4>
+
+            <section
+                aria-label="Skillset"
+                aria-details="This is the skills I had."
+            >
+                <!-- 3: skill set => grid -->
+                <ul class="article__box">
+                    <li class="article__item">
+                        <span class="article__item--row"
+                            >HTML5, CSS3(SCSS), Javascript(ES6+),
+                            Typescript</span
+                        >
+                    </li>
+                    <li class="article__item">
+                        <span class="article__item--row"
+                            >React, Next.js, Redux, Recoil</span
+                        >
+                    </li>
+                    <li class="article__item">
+                        <span class="article__item--row"
+                            >Tailwind, Styled-component</span
+                        >
+                    </li>
+                    <li class="article__item">
+                        <span class="article__item--row"
+                            >Node.js(w/ Express.js), Prisma, MongoDB(w/
+                            Mongoose)</span
+                        >
+                    </li>
+                    <li class="article__item">
+                        <span class="article__item--row">Git, Github</span>
+                    </li>
+                </ul>
+            </section>
+
             <!-- 5: other experiences: TIL, Algorithms, qualification -->
             <!-- 6: top scroll btn -->
         </main>

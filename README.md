@@ -55,6 +55,15 @@
 
 ### Day 7:
 
--   Fix action for mobile environment
+-   Fix action for mobile environment (w/ header, carousel)
 -   Add Article section
 -   Add about/project/article/blog/github button's link
+-   Fix intro strings layout
+-   Add Web accessibility attributes
+
+---
+
+### Day 8:
+
+-   Fix font-family
+-   Add Skillset

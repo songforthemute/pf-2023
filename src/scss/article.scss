@@ -6,6 +6,7 @@
         justify-content: start;
         align-items: start;
         row-gap: $size-8;
+        margin-bottom: $size-20;
     }
 
     &__item {
@@ -17,7 +18,7 @@
         }
         // background-color: $slate;
 
-        > a {
+        &--row {
             color: $lightSlate;
             text-decoration: none;
 

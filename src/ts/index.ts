@@ -39,6 +39,11 @@ const $headerArticleButton = document.getElementById("header__article");
 $headerArticleButton.addEventListener("click", () => {
     onClickAdjustScroll($articleSection.offsetTop - 200);
 });
+const $skillSection = document.getElementById("skill");
+const $headerSkillButton = document.getElementById("header__skill");
+$headerSkillButton.addEventListener("click", () => {
+    onClickAdjustScroll($skillSection.offsetTop - 200);
+});
 
 // scrolling go top
 function onClickAdjustScroll(value: number = 0) {
