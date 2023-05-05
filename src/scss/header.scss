@@ -46,7 +46,8 @@
         &:focus {
             transition: all 0.5s ease-out;
             opacity: 0.7;
-            background-color: $slate;
+            text-shadow: 0 0 $size-4 $white;
+            text-decoration: none;
         }
     }
 }

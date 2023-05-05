@@ -156,7 +156,7 @@ img {
 }
 
 * {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-family: "Nanum Gothic", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
   color: #e6f1ff;
 }
@@ -167,16 +167,22 @@ img {
 }
 
 body {
+  width: 100%;
   height: 600vh;
   background-image: url("/imgs/background.jpeg");
   background-size: cover;
   background-position: top;
-  backdrop-filter: blur(4px) grayscale(45%) contrast(95%);
-  -moz-backdrop-filter: blur(4px) grayscale(45%) contrast(95%);
-  -webkit-backdrop-filter: blur(4px) grayscale(45%) contrast(95%);
+  backdrop-filter: blur(2px) grayscale(20%) brightness(95%);
+  -moz-backdrop-filter: blur(2px) grayscale(20%) brightness(95%);
+  -webkit-backdrop-filter: blur(2px) grayscale(20%) brightness(95%);
   position: relative;
-  line-height: 1.6rem;
   box-sizing: border-box;
+  line-height: 2.8rem;
+}
+@media (max-width: 480px) {
+  body {
+    line-height: 2rem;
+  }
 }
 
 main {
@@ -285,11 +291,12 @@ main {
 .header__button:hover, .header__button:focus {
   transition: all 0.5s ease-out;
   opacity: 0.7;
-  background-color: #8892b0;
+  text-shadow: 0 0 1rem #e6f1ff;
+  text-decoration: none;
 }
 
 .intro__box {
-  margin: 5rem auto;
+  margin: 4rem auto;
   margin-top: 5rem;
   word-break: keep-all;
   line-height: 2.5rem;
@@ -306,7 +313,7 @@ main {
 }
 @media (min-width: 481px) {
   .intro__box--large {
-    font-size: 2rem;
+    font-size: 1.75rem;
     line-height: 4.5rem;
   }
 }
@@ -355,6 +362,7 @@ main {
   line-height: 3rem;
   font-size: 1.25rem;
   font-weight: 400;
+  color: #e6f1ff;
 }
 @media (max-width: 480px) {
   .intro__paragraph {
@@ -502,12 +510,7 @@ main {
   font-size: 1rem;
   margin: 1rem 2rem;
   word-break: keep-all;
-}
-@media (max-width: 480px) {
-  .carousel__detail {
-    line-height: 1.5rem;
-    font-size: 0.75rem;
-  }
+  line-height: 1.75rem;
 }
 
 @keyframes fade-in-out {
@@ -548,12 +551,22 @@ main {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  row-gap: 2rem;
+  line-height: 3.5rem;
   margin-bottom: 5rem;
+}
+@media (max-width: 420px) {
+  .article__box {
+    line-height: 2rem;
+  }
 }
 .article__item {
   font-size: 1.25rem;
   list-style-color: #a8b2d1;
+}
+@media (max-width: 420px) {
+  .article__item {
+    font-size: 1rem;
+  }
 }
 .article__item::before {
   content: "•";

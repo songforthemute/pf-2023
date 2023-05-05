@@ -70,3 +70,4 @@
 -   Fix Layout(margin)
 -   Fix copyrights
 -   Add heading animation
+-   Fix Font set

@@ -163,13 +163,10 @@
 
     &__detail {
         color: $lightSlate;
-        font-size: $size-4;
+        font-size: $font-size-mini;
         margin: $size-4 $size-8;
         word-break: keep-all;
-        @media (max-width: 480px) {
-            line-height: $size-6;
-            font-size: $size-3;
-        }
+        line-height: $line-height-mini;
     }
 }
 

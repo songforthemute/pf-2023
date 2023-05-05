@@ -5,12 +5,19 @@
         flex-direction: column;
         justify-content: start;
         align-items: start;
-        row-gap: $size-8;
+        line-height: $line-height-medium;
+        @media (max-width: 420px) {
+            line-height: $line-height-small;
+        }
         margin-bottom: $size-20;
     }
 
     &__item {
-        font-size: $size-5;
+        font-size: $font-size-small;
+        @media (max-width: 420px) {
+            font-size: $font-size-mini;
+        }
+
         list-style-color: $lightSlate;
         &::before {
             content: "\2022";

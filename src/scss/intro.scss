@@ -1,6 +1,6 @@
 .intro {
     &__box {
-        margin: $size-20 auto;
+        margin: $size-16 auto;
         margin-top: $size-20;
         word-break: keep-all;
         line-height: $line-height;
@@ -71,8 +71,9 @@
 
     &__paragraph {
         line-height: $size-12;
-        font-size: $size-5;
+        font-size: $font-size-small;
         font-weight: $font-normal;
+        color: $white;
         @media (max-width: 480px) {
             line-height: $size-8;
             font-size: $size-4;
