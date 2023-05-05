@@ -55,9 +55,18 @@
     }
 
     &__heading {
-        margin: $size-84 auto;
+        margin: $size-72 auto;
+        padding-bottom: $size-12;
         font-size: $font-size-large;
         line-height: $line-height-large;
+
+        &--animation {
+            margin-top: $size-1;
+            will-change: auto;
+            animation: ping-down 2s ease-out infinite;
+            // animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            filter: grayscale(35%);
+        }
     }
 
     &__paragraph {
@@ -68,5 +77,20 @@
             line-height: $size-8;
             font-size: $size-4;
         }
+    }
+}
+
+@keyframes ping-down {
+    0% {
+        transform: translateY(0px);
+    }
+    33% {
+        transform: translateY(50px);
+    }
+    66% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }

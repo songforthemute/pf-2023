@@ -69,3 +69,4 @@
 -   Add Skillset
 -   Fix Layout(margin)
 -   Fix copyrights
+-   Add heading animation

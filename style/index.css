@@ -340,9 +340,16 @@ main {
   }
 }
 .intro__heading {
-  margin: 21rem auto;
+  margin: 18rem auto;
+  padding-bottom: 3rem;
   font-size: 2.5rem;
   line-height: 4.5rem;
+}
+.intro__heading--animation {
+  margin-top: 0.25rem;
+  will-change: auto;
+  animation: ping-down 2s ease-out infinite;
+  filter: grayscale(35%);
 }
 .intro__paragraph {
   line-height: 3rem;
@@ -356,6 +363,20 @@ main {
   }
 }
 
+@keyframes ping-down {
+  0% {
+    transform: translateY(0px);
+  }
+  33% {
+    transform: translateY(50px);
+  }
+  66% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 .carousel {
   margin: 3rem auto;
   width: 100%;

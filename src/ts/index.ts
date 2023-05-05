@@ -22,28 +22,15 @@ if (window?.sessionStorage.getItem("isVisited")) {
 const $headerTitle = document.querySelector(
     ".header__title"
 ) as HTMLHeadingElement;
-
 // header buttons: move scroll to the specific position
 const $aboutSection = document.getElementById("about");
-const $headerAboutButton = document.getElementById("header__about");
-$headerAboutButton.addEventListener("click", () => {
-    onClickAdjustScroll($aboutSection.offsetTop - 200);
-});
 const $projectSection = document.getElementById("project");
-const $headerProjectButton = document.getElementById("header__project");
-$headerProjectButton.addEventListener("click", () => {
-    onClickAdjustScroll($projectSection.offsetTop - 75);
-});
 const $articleSection = document.getElementById("article");
-const $headerArticleButton = document.getElementById("header__article");
-$headerArticleButton.addEventListener("click", () => {
-    onClickAdjustScroll($articleSection.offsetTop - 100);
-});
 const $skillSection = document.getElementById("skill");
+const $headerAboutButton = document.getElementById("header__about");
+const $headerProjectButton = document.getElementById("header__project");
+const $headerArticleButton = document.getElementById("header__article");
 const $headerSkillButton = document.getElementById("header__skill");
-$headerSkillButton.addEventListener("click", () => {
-    onClickAdjustScroll($skillSection.offsetTop - 100);
-});
 
 // scrolling go top
 function onClickAdjustScroll(value: number = 0) {
@@ -59,7 +46,35 @@ function onClickAdjustScroll(value: number = 0) {
 $headerTitle?.addEventListener("click", () => {
     onClickAdjustScroll();
 });
+$headerAboutButton?.addEventListener("click", () => {
+    onClickAdjustScroll($aboutSection.offsetTop - 200);
+});
+$headerProjectButton?.addEventListener("click", () => {
+    onClickAdjustScroll($projectSection.offsetTop - 75);
+});
+$headerArticleButton?.addEventListener("click", () => {
+    onClickAdjustScroll($articleSection.offsetTop - 100);
+});
+$headerSkillButton?.addEventListener("click", () => {
+    onClickAdjustScroll($skillSection.offsetTop - 100);
+});
 
+// When scrolled down, adjust animation & hide them
+const $introHeadingAnimation = document.querySelector(
+    ".intro__heading--animation"
+) as HTMLDivElement;
+
+document.addEventListener("scroll", function emoticonAnimation() {
+    if (scrollY <= 500) {
+        $introHeadingAnimation.style.opacity = String(1 - (0.01 * scrollY) / 5);
+    } else {
+        $introHeadingAnimation.style.opacity = "0";
+        $introHeadingAnimation.style.animation = "";
+        this.removeEventListener("scroll", emoticonAnimation);
+    }
+});
+
+// CAROUSEL PART
 const $carouselImagePrev = document.querySelector(
     ".carousel__image--prev"
 ) as HTMLButtonElement;

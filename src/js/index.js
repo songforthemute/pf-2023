@@ -19,25 +19,13 @@ else {
 var $headerTitle = document.querySelector(".header__title");
 // header buttons: move scroll to the specific position
 var $aboutSection = document.getElementById("about");
-var $headerAboutButton = document.getElementById("header__about");
-$headerAboutButton.addEventListener("click", function () {
-    onClickAdjustScroll($aboutSection.offsetTop - 200);
-});
 var $projectSection = document.getElementById("project");
-var $headerProjectButton = document.getElementById("header__project");
-$headerProjectButton.addEventListener("click", function () {
-    onClickAdjustScroll($projectSection.offsetTop - 75);
-});
 var $articleSection = document.getElementById("article");
-var $headerArticleButton = document.getElementById("header__article");
-$headerArticleButton.addEventListener("click", function () {
-    onClickAdjustScroll($articleSection.offsetTop - 100);
-});
 var $skillSection = document.getElementById("skill");
+var $headerAboutButton = document.getElementById("header__about");
+var $headerProjectButton = document.getElementById("header__project");
+var $headerArticleButton = document.getElementById("header__article");
 var $headerSkillButton = document.getElementById("header__skill");
-$headerSkillButton.addEventListener("click", function () {
-    onClickAdjustScroll($skillSection.offsetTop - 100);
-});
 // scrolling go top
 function onClickAdjustScroll(value) {
     if (value === void 0) { value = 0; }
@@ -52,6 +40,31 @@ function onClickAdjustScroll(value) {
 $headerTitle === null || $headerTitle === void 0 ? void 0 : $headerTitle.addEventListener("click", function () {
     onClickAdjustScroll();
 });
+$headerAboutButton === null || $headerAboutButton === void 0 ? void 0 : $headerAboutButton.addEventListener("click", function () {
+    onClickAdjustScroll($aboutSection.offsetTop - 200);
+});
+$headerProjectButton === null || $headerProjectButton === void 0 ? void 0 : $headerProjectButton.addEventListener("click", function () {
+    onClickAdjustScroll($projectSection.offsetTop - 75);
+});
+$headerArticleButton === null || $headerArticleButton === void 0 ? void 0 : $headerArticleButton.addEventListener("click", function () {
+    onClickAdjustScroll($articleSection.offsetTop - 100);
+});
+$headerSkillButton === null || $headerSkillButton === void 0 ? void 0 : $headerSkillButton.addEventListener("click", function () {
+    onClickAdjustScroll($skillSection.offsetTop - 100);
+});
+// When scrolled down, adjust animation & hide them
+var $introHeadingAnimation = document.querySelector(".intro__heading--animation");
+document.addEventListener("scroll", function emoticonAnimation() {
+    if (scrollY <= 500) {
+        $introHeadingAnimation.style.opacity = String(1 - (0.01 * scrollY) / 5);
+    }
+    else {
+        $introHeadingAnimation.style.opacity = "0";
+        $introHeadingAnimation.style.animation = "";
+        this.removeEventListener("scroll", emoticonAnimation);
+    }
+});
+// CAROUSEL PART
 var $carouselImagePrev = document.querySelector(".carousel__image--prev");
 var $carouselImageNext = document.querySelector(".carousel__image--next");
 var $carouselContainerPrev = document.querySelector(".carousel__project--prev");
