@@ -67,3 +67,5 @@
 
 -   Fix font-family
 -   Add Skillset
+-   Fix Layout(margin)
+-   Fix copyrights

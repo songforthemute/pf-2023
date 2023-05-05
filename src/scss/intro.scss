@@ -1,18 +1,25 @@
 .intro {
     &__box {
-        margin: $size-12 auto;
+        margin: $size-20 auto;
         margin-top: $size-20;
         word-break: keep-all;
-        line-height: $font-size + $size-2;
+        line-height: $line-height;
 
         @media (max-width: 480px) {
-            line-height: $font-size-mobile + $size-2;
+            line-height: $line-height-mobile;
             margin: $size-6 auto;
             margin-top: $size-10;
         }
 
         &--bold {
             font-weight: $font-bold;
+        }
+
+        &--large {
+            @media (min-width: 481px) {
+                font-size: $font-size;
+                line-height: $line-height-large;
+            }
         }
 
         > span {
@@ -48,9 +55,9 @@
     }
 
     &__heading {
-        font-size: $size-8;
-        line-height: $size-16;
-        margin: $size-48 auto;
+        margin: $size-84 auto;
+        font-size: $font-size-large;
+        line-height: $line-height-large;
     }
 
     &__paragraph {

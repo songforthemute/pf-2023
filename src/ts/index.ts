@@ -32,17 +32,17 @@ $headerAboutButton.addEventListener("click", () => {
 const $projectSection = document.getElementById("project");
 const $headerProjectButton = document.getElementById("header__project");
 $headerProjectButton.addEventListener("click", () => {
-    onClickAdjustScroll($projectSection.offsetTop - 100);
+    onClickAdjustScroll($projectSection.offsetTop - 75);
 });
 const $articleSection = document.getElementById("article");
 const $headerArticleButton = document.getElementById("header__article");
 $headerArticleButton.addEventListener("click", () => {
-    onClickAdjustScroll($articleSection.offsetTop - 200);
+    onClickAdjustScroll($articleSection.offsetTop - 100);
 });
 const $skillSection = document.getElementById("skill");
 const $headerSkillButton = document.getElementById("header__skill");
 $headerSkillButton.addEventListener("click", () => {
-    onClickAdjustScroll($skillSection.offsetTop - 200);
+    onClickAdjustScroll($skillSection.offsetTop - 100);
 });
 
 // scrolling go top

@@ -26,17 +26,17 @@ $headerAboutButton.addEventListener("click", function () {
 var $projectSection = document.getElementById("project");
 var $headerProjectButton = document.getElementById("header__project");
 $headerProjectButton.addEventListener("click", function () {
-    onClickAdjustScroll($projectSection.offsetTop - 100);
+    onClickAdjustScroll($projectSection.offsetTop - 75);
 });
 var $articleSection = document.getElementById("article");
 var $headerArticleButton = document.getElementById("header__article");
 $headerArticleButton.addEventListener("click", function () {
-    onClickAdjustScroll($articleSection.offsetTop - 200);
+    onClickAdjustScroll($articleSection.offsetTop - 100);
 });
 var $skillSection = document.getElementById("skill");
 var $headerSkillButton = document.getElementById("header__skill");
 $headerSkillButton.addEventListener("click", function () {
-    onClickAdjustScroll($skillSection.offsetTop - 200);
+    onClickAdjustScroll($skillSection.offsetTop - 100);
 });
 // scrolling go top
 function onClickAdjustScroll(value) {
