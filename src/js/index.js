@@ -41,10 +41,10 @@ $headerTitle === null || $headerTitle === void 0 ? void 0 : $headerTitle.addEven
     onClickAdjustScroll();
 });
 $headerAboutButton === null || $headerAboutButton === void 0 ? void 0 : $headerAboutButton.addEventListener("click", function () {
-    onClickAdjustScroll($aboutSection.offsetTop - 200);
+    onClickAdjustScroll($aboutSection.offsetTop - 100);
 });
 $headerProjectButton === null || $headerProjectButton === void 0 ? void 0 : $headerProjectButton.addEventListener("click", function () {
-    onClickAdjustScroll($projectSection.offsetTop - 75);
+    onClickAdjustScroll($projectSection.offsetTop + 25);
 });
 $headerArticleButton === null || $headerArticleButton === void 0 ? void 0 : $headerArticleButton.addEventListener("click", function () {
     onClickAdjustScroll($articleSection.offsetTop - 100);
@@ -53,15 +53,15 @@ $headerSkillButton === null || $headerSkillButton === void 0 ? void 0 : $headerS
     onClickAdjustScroll($skillSection.offsetTop - 100);
 });
 // When scrolled down, adjust animation & hide them
-var $introHeadingAnimation = document.querySelector(".intro__heading--animation");
-document.addEventListener("scroll", function emoticonAnimation() {
+var $introAnimation = document.getElementById("intro__animation");
+document.addEventListener("scroll", function introAnimation() {
     if (scrollY <= 500) {
-        $introHeadingAnimation.style.opacity = String(1 - (0.01 * scrollY) / 5);
+        $introAnimation.style.opacity = String(1 - (0.01 * scrollY) / 5);
     }
     else {
-        $introHeadingAnimation.style.opacity = "0";
-        $introHeadingAnimation.style.animation = "";
-        this.removeEventListener("scroll", emoticonAnimation);
+        $introAnimation.style.opacity = "0";
+        $introAnimation.style.animation = "";
+        this.removeEventListener("scroll", introAnimation);
     }
 });
 // CAROUSEL PART

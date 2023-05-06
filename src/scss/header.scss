@@ -1,8 +1,12 @@
+@mixin text-glow() {
+    text-shadow: 0 0 10px $white;
+}
+
 .header {
-    justify-content: space-evenly;
-    align-items: center;
     display: flex;
     position: sticky;
+    align-items: center;
+    justify-content: space-evenly;
     top: 0;
 
     @media (max-width: 480px) {
@@ -10,10 +14,8 @@
     }
 
     &__title {
-        padding: $size-2;
-        font-size: $size-6;
-        // font-weight: $font-bold;
-        text-shadow: 0 0 $size-3 $white;
+        padding-top: $size-4;
+        @include text-glow();
 
         &:hover {
             transition: opacity 0.5s ease-out;
@@ -22,32 +24,23 @@
         }
     }
 
-    > section {
-        text-align: center;
-        @media (max-width: 480px) {
+    &__nav {
+        &--ul {
             display: flex;
-        }
-    }
-
-    &__button {
-        font-family: $font-family;
-        font-size: $size-4;
-        padding: $size-2 $size-4;
-        border-radius: $size-4;
-        text-decoration: underline;
-        text-underline-offset: $size-1;
-        text-decoration-thickness: 0.05rem;
-
-        @media (max-width: 480px) {
-            padding: $size-2;
+            column-gap: $size-2;
+            padding-top: $size-4;
+            @media (max-width: 480px) {
+                padding-top: 0;
+            }
         }
 
-        &:hover,
-        &:focus {
-            transition: all 0.5s ease-out;
-            opacity: 0.7;
-            text-shadow: 0 0 $size-4 $white;
-            text-decoration: none;
+        &--li {
+            // text-decoration: underline;
+            // text-underline-offset: 0.1rem;
+            // text-decoration-thickness: 0.1rem;
+            &:hover {
+                @include text-glow();
+            }
         }
     }
 }

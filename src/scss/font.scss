@@ -1,0 +1,59 @@
+$font-size: 1.1rem;
+
+.font {
+    &-s {
+        font-size: $font-size * 0.75;
+        line-height: $font-size * 0.75 * 1.9;
+    }
+    &-m {
+        font-size: $font-size * 1.1;
+        line-height: $font-size * 1.1 * 1.9;
+    }
+    &-l {
+        font-size: $font-size * 1.5;
+        line-height: $font-size * 1.5 * 2;
+    }
+    &-xl {
+        font-size: $font-size * 2.2;
+        line-height: $font-size * 2.2 * 2;
+    }
+
+    &-wh {
+        color: $white;
+    }
+    &-bk {
+        color: $black;
+    }
+    &-slate {
+        color: $slate;
+    }
+    &-lightSlate {
+        color: $lightSlate;
+    }
+
+    &-center {
+        text-align: center;
+    }
+    &-left {
+        text-align: left;
+    }
+    &-right {
+        text-align: right;
+    }
+
+    &-keep {
+        word-break: keep-all;
+    }
+
+    &-focus:focus,
+    &-hover:hover {
+        transition: all 0.5s ease-out;
+        opacity: 0.7;
+        text-shadow: 0 0 10px $white;
+    }
+    // &-hover:hover {
+    //     transition: all 0.5s ease-out;
+    //     opacity: 0.7;
+    //     text-shadow: 0 0 10px $white;
+    // }
+}

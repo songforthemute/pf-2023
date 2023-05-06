@@ -47,10 +47,10 @@ $headerTitle?.addEventListener("click", () => {
     onClickAdjustScroll();
 });
 $headerAboutButton?.addEventListener("click", () => {
-    onClickAdjustScroll($aboutSection.offsetTop - 200);
+    onClickAdjustScroll($aboutSection.offsetTop - 100);
 });
 $headerProjectButton?.addEventListener("click", () => {
-    onClickAdjustScroll($projectSection.offsetTop - 75);
+    onClickAdjustScroll($projectSection.offsetTop + 25);
 });
 $headerArticleButton?.addEventListener("click", () => {
     onClickAdjustScroll($articleSection.offsetTop - 100);
@@ -60,17 +60,17 @@ $headerSkillButton?.addEventListener("click", () => {
 });
 
 // When scrolled down, adjust animation & hide them
-const $introHeadingAnimation = document.querySelector(
-    ".intro__heading--animation"
+const $introAnimation = document.getElementById(
+    "intro__animation"
 ) as HTMLDivElement;
 
-document.addEventListener("scroll", function emoticonAnimation() {
+document.addEventListener("scroll", function introAnimation() {
     if (scrollY <= 500) {
-        $introHeadingAnimation.style.opacity = String(1 - (0.01 * scrollY) / 5);
+        $introAnimation.style.opacity = String(1 - (0.01 * scrollY) / 5);
     } else {
-        $introHeadingAnimation.style.opacity = "0";
-        $introHeadingAnimation.style.animation = "";
-        this.removeEventListener("scroll", emoticonAnimation);
+        $introAnimation.style.opacity = "0";
+        $introAnimation.style.animation = "";
+        this.removeEventListener("scroll", introAnimation);
     }
 });
 

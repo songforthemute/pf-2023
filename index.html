@@ -28,631 +28,654 @@
             </span>
         </div>
 
-        <!-- 헤더 부분 -->
         <header class="header">
-            <!-- 2 Columns -->
-            <!-- Left: songforthemute && scroll on top -->
-            <!-- Right: github | blog | resume svg icon -->
-            <!-- hover event -->
-            <!-- open in the new tab -->
-
             <div>
-                <button class="header__title">songforthemute</button>
+                <button class="header__title font-m">songforthemute</button>
             </div>
-            <section>
-                <button id="header__about" class="header__button">about</button>
-                <button id="header__project" class="header__button">
-                    project
-                </button>
-                <button id="header__article" class="header__button">
-                    article
-                </button>
-                <button id="header__skill" class="header__button">skill</button>
-                <a
-                    href="https://medium.com/@songforthemute"
-                    rel="noopener noreferrer"
-                    id="header__blog"
-                    class="header__button"
-                    target="_blank"
-                    tabindex="0"
-                    >blog</a
-                >
-                <a
-                    href="https://github.com/songforthemute"
-                    rel="noopener noreferrer"
-                    id="header__github"
-                    class="header__button"
-                    target="_blank"
-                    tabindex="0"
-                >
-                    github
-                </a>
-            </section>
+            <nav>
+                <ul class="header__nav--ul">
+                    <li>
+                        <button
+                            id="header__about"
+                            class="header__nav--li font-s font-hover"
+                        >
+                            about
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            id="header__project"
+                            class="header__nav--li font-s font-hover"
+                        >
+                            project
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            id="header__article"
+                            class="header__nav--li font-s font-hover"
+                        >
+                            article
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            id="header__skill"
+                            class="header__nav--li font-s font-hover"
+                        >
+                            skill
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            id="header__others"
+                            class="header__nav--li font-s font-hover"
+                        >
+                            others
+                        </button>
+                    </li>
+                    <!-- <li>
+                        <button
+                            id="header__contact"
+                            class="header__nav--li font-s"
+                        >
+                            contact
+                        </button>
+                    </li> -->
+                </ul>
+            </nav>
         </header>
 
         <!-- 메인 부분 -->
         <main>
             <section
-                class="intro__box intro__center intro__heading"
-                aria-label="Introduce 1"
+                class="intro font-xl font-center"
+                aria-label="Introduce myself 1"
                 aria-details="This is the introduce myself 1"
             >
                 <!-- 1: introduce 1 -->
-                <h2>반갑습니다</h2>
-                <h4>저는 <u>이주헌</u>입니다 :D</h4>
-                <div class="intro__heading--animation">👇🏻</div>
+                <h1>반갑습니다</h1>
+                <h3>저는 <u>이주헌</u>입니다 :D</h3>
+                <div id="intro__animation" class="intro__animation">👇🏻</div>
             </section>
             <!-- <p class="intro__box intro__paragraph"> -->
             <!-- 1: introduce 2 -->
-            <p
-                id="about"
-                class="intro__box intro__right intro__box--large"
-                aria-label="Introduce 2"
-                aria-details="This is the introduce myself 2"
-            >
-                저는 섬세하고 집요한,<br />직관적인 UI와<br />기억에 남는 UX를
-                만드는<br /><u>프런트엔드 엔지니어</u>입니다.
-            </p>
-            <p
-                class="intro__box intro__left intro__paragraph"
-                aria-label="Introduce 3"
-                aria-details="This is the introduce myself 3"
-            >
-                디자인 전공을 접목시켜 프런트엔드 개발 역량을 탄탄히
-                쌓아나갔으며, 웹 표준과 접근성을 준수하며 12%의 브라우저 성능
-                향상을 이끈 경험이 있습니다. 또한, 백엔드 개발 역량 또한
-                빠트리지 않고 습득하여 홀로 풀스택 프로젝트를 배포까지 진행한
-                경험도 있습니다.
-            </p>
-            <!-- </p> -->
-            <!--  -->
-            <!-- 2: projects carousel -->
-            <h4 id="project" class="intro__box intro__left">
-                이런 <u>프로젝트</u> 경험이 있습니다.
-            </h4>
-            <!--  -->
-            <section
-                class="carousel"
-                role="region"
-                aria-label="Project image carousel"
-                aria-details="This is the carousel of my projects."
-            >
-                <button class="carousel__project--prev">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5"
-                        />
-                    </svg>
-                </button>
-                <button class="carousel__image--prev">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="w-6 h-6"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M15.75 19.5L8.25 12l7.5-7.5"
-                        />
-                    </svg>
-                </button>
-
-                <ul class="carousel__list">
-                    <li class="carousel__item--box carousel__item--active">
-                        <h4 class="carousel__heading">
-                            <span>Palette</span>
-                            <a
-                                href="https://palette-pi.vercel.app"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                tabindex="0"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                href="https://github.com/songforthemute/palette"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                tabindex="0"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
-                                    /></svg
-                            ></a>
-                        </h4>
-                        <p class="carousel__detail">
-                            AI 기반 키워드별 컬러 추천 및 피킹 서비스<br />w/
-                            Next.js, Typescript, TailwindCSS, Openai
-                        </p>
-                        <ul class="carousel__list">
-                            <li
-                                class="carousel__item--image carousel__item--active"
-                            >
-                                <img
-                                    src="imgs/palette1.png"
-                                    alt="project palette carousel image 1"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/palette2.png"
-                                    alt="project palette carousel image 2"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/palette3.png"
-                                    alt="project palette carousel image 3"
-                                />
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="carousel__item--box">
-                        <h4 class="carousel__heading">
-                            <span>Galaxy Market</span>
-                            <a
-                                href="https://galaxy-market-rose.vercel.app"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                tabindex="0"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                href="https://github.com/songforthemute/galaxy-market"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                tabindex="0"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
-                                    /></svg
-                            ></a>
-                        </h4>
-                        <p class="carousel__detail">
-                            C2C 중고 거래 서비스 플랫폼<br />w/ Next.js
-                            Typescript, SWR, TailwindCSS, Prisma
-                        </p>
-                        <ul class="carousel__list">
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/galaxyMarket1.png"
-                                    alt="project galaxyMarket carousel image 1"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/galaxyMarket2.png"
-                                    alt="project galaxyMarket carousel image 2"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/galaxyMarket3.png"
-                                    alt="project galaxyMarket carousel image 3"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/galaxyMarket4.png"
-                                    alt="project galaxyMarket carousel image 4"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/galaxyMarket5.png"
-                                    alt="project galaxyMarket carousel image 5"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/galaxyMarket6.png"
-                                    alt="project galaxyMarket carousel image 6"
-                                />
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="carousel__item--box">
-                        <h4 class="carousel__heading">
-                            <span>At Flix</span>
-                            <a
-                                href="https://songforthemute.github.io/at-flix"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                tabindex="0"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                href="https://github.com/songforthemute/at-flix"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                tabindex="0"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
-                                    /></svg
-                            ></a>
-                        </h4>
-                        <p class="carousel__detail">
-                            영화 & TV 시리즈 탐색 서비스<br />w/ Typescript,
-                            React, styled-component, react-query, framer-motion
-                        </p>
-                        <ul class="carousel__list">
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/atflix1.png"
-                                    alt="project atFlix carousel image 1"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/atflix2.png"
-                                    alt="project atFlix carousel image 2"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/atflix3.png"
-                                    alt="project atFlix carousel image 3"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/atflix4.png"
-                                    alt="project atFlix carousel image 4"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/atflix5.png"
-                                    alt="project atFlix carousel image 5"
-                                />
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="carousel__item--box">
-                        <h4 class="carousel__heading">
-                            <span>Rello</span>
-                            <a
-                                href="https://tsrello.netlify.app"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                tabindex="0"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                href="https://github.com/songforthemute/rello"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                tabindex="0"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
-                                    /></svg
-                            ></a>
-                        </h4>
-                        <p class="carousel__detail">
-                            스케줄 칸반 보드 서비스<br />w/ Typescript, React,
-                            styled-components, recoil
-                        </p>
-                        <ul class="carousel__list">
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/rello1.png"
-                                    alt="project rello carousel image 1"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/rello2.png"
-                                    alt="project rello carousel image 2"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/rello3.png"
-                                    alt="project rello carousel image 3"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/rello4.png"
-                                    alt="project rello carousel image 4"
-                                />
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="carousel__item--box">
-                        <h4 class="carousel__heading">
-                            <span>Coin Track</span>
-                            <a
-                                href="https://track-coin-track.netlify.app"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                tabindex="0"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                href="https://github.com/songforthemute/coin_track"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                tabindex="0"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
-                                    /></svg
-                            ></a>
-                        </h4>
-                        <p class="carousel__detail">
-                            암호 화폐 트래킹 서비스<br />w/ Typescript, React,
-                            recoil, ApexCharts
-                        </p>
-                        <ul class="carousel__list">
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/cointrack1.png"
-                                    alt="project coin-track carousel image 1"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/cointrack2.png"
-                                    alt="project coin-track carousel image 2"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/cointrack3.png"
-                                    alt="project coin-track carousel image 3"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/cointrack4.png"
-                                    alt="project coin-track carousel image 4"
-                                />
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="carousel__item--box">
-                        <h4 class="carousel__heading">
-                            <span>Music Tree</span>
-                            <a
-                                href="https://songforthemute.github.io/musictree"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                tabindex="0"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
-                                    />
-                                </svg>
-                            </a>
-                            <a
-                                href="https://github.com/songforthemute/musictree"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                tabindex="0"
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="1.5"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
-                                    /></svg
-                            ></a>
-                        </h4>
-                        <p class="carousel__detail">
-                            음원 & 아티스트 탐색 서비스<br />w/ Javascript,
-                            React
-                        </p>
-                        <ul class="carousel__list">
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/musictree1.png"
-                                    alt="project musictree carousel image 1"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/musictree2.png"
-                                    alt="project musictree carousel image 2"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/musictree3.png"
-                                    alt="project musictree carousel image 3"
-                                />
-                            </li>
-                            <li class="carousel__item--image">
-                                <img
-                                    src="imgs/musictree4.png"
-                                    alt="project musictree carousel image 4"
-                                />
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <button class="carousel__image--next">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="w-6 h-6"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                        />
-                    </svg>
-                </button>
-                <button class="carousel__project--next">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="w-6 h-6"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
-                        />
-                    </svg>
-                </button>
+            <section id="about" class="about" class="container">
+                <p
+                    class="about__right font-l font-right font-keep"
+                    aria-label="Introduce 2"
+                    aria-details="This is the introduce myself 2"
+                >
+                    저는 섬세하고 집요한,<br />직관적인 UI와<br />기억에 남는
+                    UX를 만드는<br /><u>프런트엔드 엔지니어</u>입니다.
+                </p>
+                <p
+                    class="about__left font-m font-left font-keep"
+                    aria-label="Introduce 3"
+                    aria-details="This is the introduce myself 3"
+                >
+                    디자인 전공을 접목시켜 프런트엔드 개발 역량을 탄탄히
+                    쌓아나갔으며,<br />
+                    웹 표준과 접근성을 준수하며
+                    <u>12%의 브라우저 성능 향상</u>을 이끈 경험이 있습니다.<br />
+                    또한, 백엔드 개발 역량 또한 빠트리지 않고 습득하여<br />
+                    홀로 풀스택 프로젝트를 배포까지 진행한 경험도 있습니다.
+                </p>
             </section>
 
-            <h4 id="article" class="intro__box intro__left">
-                경험으로 배운 것을 <u>기록</u>으로 남기고 있습니다.
-            </h4>
+            <!--  -->
+            <!-- 2: projects carousel -->
+            <section id="project" class="container">
+                <h3 class="heading font-l font-left font-keep">
+                    저는 이런 <u>프로젝트</u> 경험이 있습니다.
+                </h3>
+                <!--  -->
+                <div
+                    class="carousel"
+                    role="region"
+                    aria-label="Project image carousel"
+                    aria-details="This is the carousel of my projects."
+                >
+                    <button class="carousel__project--prev">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5"
+                            />
+                        </svg>
+                    </button>
+                    <button class="carousel__image--prev">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-6 h-6"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M15.75 19.5L8.25 12l7.5-7.5"
+                            />
+                        </svg>
+                    </button>
+
+                    <ul class="carousel__list">
+                        <li class="carousel__item--box carousel__item--active">
+                            <h4 class="carousel__heading">
+                                <span>Palette</span>
+                                <a
+                                    href="https://palette-pi.vercel.app"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    tabindex="0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                                        />
+                                    </svg>
+                                </a>
+                                <a
+                                    href="https://github.com/songforthemute/palette"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    tabindex="0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                                        /></svg
+                                ></a>
+                            </h4>
+                            <p class="carousel__detail">
+                                AI 기반 키워드별 컬러 추천 및 피킹 서비스<br />w/
+                                Next.js, Typescript, TailwindCSS, Openai
+                            </p>
+                            <ul class="carousel__list">
+                                <li
+                                    class="carousel__item--image carousel__item--active"
+                                >
+                                    <img
+                                        src="imgs/palette1.png"
+                                        alt="project palette carousel image 1"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/palette2.png"
+                                        alt="project palette carousel image 2"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/palette3.png"
+                                        alt="project palette carousel image 3"
+                                    />
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="carousel__item--box">
+                            <h4 class="carousel__heading">
+                                <span>Galaxy Market</span>
+                                <a
+                                    href="https://galaxy-market-rose.vercel.app"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    tabindex="0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                                        />
+                                    </svg>
+                                </a>
+                                <a
+                                    href="https://github.com/songforthemute/galaxy-market"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    tabindex="0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                                        /></svg
+                                ></a>
+                            </h4>
+                            <p class="carousel__detail">
+                                C2C 중고 거래 서비스 플랫폼<br />w/ Next.js
+                                Typescript, SWR, TailwindCSS, Prisma
+                            </p>
+                            <ul class="carousel__list">
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/galaxyMarket1.png"
+                                        alt="project galaxyMarket carousel image 1"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/galaxyMarket2.png"
+                                        alt="project galaxyMarket carousel image 2"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/galaxyMarket3.png"
+                                        alt="project galaxyMarket carousel image 3"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/galaxyMarket4.png"
+                                        alt="project galaxyMarket carousel image 4"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/galaxyMarket5.png"
+                                        alt="project galaxyMarket carousel image 5"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/galaxyMarket6.png"
+                                        alt="project galaxyMarket carousel image 6"
+                                    />
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="carousel__item--box">
+                            <h4 class="carousel__heading">
+                                <span>At Flix</span>
+                                <a
+                                    href="https://songforthemute.github.io/at-flix"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    tabindex="0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                                        />
+                                    </svg>
+                                </a>
+                                <a
+                                    href="https://github.com/songforthemute/at-flix"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    tabindex="0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                                        /></svg
+                                ></a>
+                            </h4>
+                            <p class="carousel__detail">
+                                영화 & TV 시리즈 탐색 서비스<br />w/ Typescript,
+                                React, styled-component, react-query,
+                                framer-motion
+                            </p>
+                            <ul class="carousel__list">
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/atflix1.png"
+                                        alt="project atFlix carousel image 1"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/atflix2.png"
+                                        alt="project atFlix carousel image 2"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/atflix3.png"
+                                        alt="project atFlix carousel image 3"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/atflix4.png"
+                                        alt="project atFlix carousel image 4"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/atflix5.png"
+                                        alt="project atFlix carousel image 5"
+                                    />
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="carousel__item--box">
+                            <h4 class="carousel__heading">
+                                <span>Rello</span>
+                                <a
+                                    href="https://tsrello.netlify.app"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    tabindex="0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                                        />
+                                    </svg>
+                                </a>
+                                <a
+                                    href="https://github.com/songforthemute/rello"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    tabindex="0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                                        /></svg
+                                ></a>
+                            </h4>
+                            <p class="carousel__detail">
+                                스케줄 칸반 보드 서비스<br />w/ Typescript,
+                                React, styled-components, recoil
+                            </p>
+                            <ul class="carousel__list">
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/rello1.png"
+                                        alt="project rello carousel image 1"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/rello2.png"
+                                        alt="project rello carousel image 2"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/rello3.png"
+                                        alt="project rello carousel image 3"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/rello4.png"
+                                        alt="project rello carousel image 4"
+                                    />
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="carousel__item--box">
+                            <h4 class="carousel__heading">
+                                <span>Coin Track</span>
+                                <a
+                                    href="https://track-coin-track.netlify.app"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    tabindex="0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                                        />
+                                    </svg>
+                                </a>
+                                <a
+                                    href="https://github.com/songforthemute/coin_track"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    tabindex="0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                                        /></svg
+                                ></a>
+                            </h4>
+                            <p class="carousel__detail">
+                                암호 화폐 트래킹 서비스<br />w/ Typescript,
+                                React, recoil, ApexCharts
+                            </p>
+                            <ul class="carousel__list">
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/cointrack1.png"
+                                        alt="project coin-track carousel image 1"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/cointrack2.png"
+                                        alt="project coin-track carousel image 2"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/cointrack3.png"
+                                        alt="project coin-track carousel image 3"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/cointrack4.png"
+                                        alt="project coin-track carousel image 4"
+                                    />
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="carousel__item--box">
+                            <h4 class="carousel__heading">
+                                <span>Music Tree</span>
+                                <a
+                                    href="https://songforthemute.github.io/musictree"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    tabindex="0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                                        />
+                                    </svg>
+                                </a>
+                                <a
+                                    href="https://github.com/songforthemute/musictree"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    tabindex="0"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                                        /></svg
+                                ></a>
+                            </h4>
+                            <p class="carousel__detail">
+                                음원 & 아티스트 탐색 서비스<br />w/ Javascript,
+                                React
+                            </p>
+                            <ul class="carousel__list">
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/musictree1.png"
+                                        alt="project musictree carousel image 1"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/musictree2.png"
+                                        alt="project musictree carousel image 2"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/musictree3.png"
+                                        alt="project musictree carousel image 3"
+                                    />
+                                </li>
+                                <li class="carousel__item--image">
+                                    <img
+                                        src="imgs/musictree4.png"
+                                        alt="project musictree carousel image 4"
+                                    />
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <button class="carousel__image--next">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-6 h-6"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                            />
+                        </svg>
+                    </button>
+                    <button class="carousel__project--next">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-6 h-6"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"
+                            />
+                        </svg>
+                    </button>
+                </div>
+            </section>
 
             <section
+                id="article"
+                class="container"
                 aria-label="Articles"
                 aria-details="This is the recorded articles that earned by my experience."
             >
-                <ul class="article__box">
+                <h3 class="heading font-l font-left font-keep">
+                    저는 경험으로 배운 것을 <u>기록</u>으로 남기고 있습니다.
+                </h3>
+
+                <ul class="article__ul">
                     <li class="article__item">
                         <a
                             class="article__item--row"

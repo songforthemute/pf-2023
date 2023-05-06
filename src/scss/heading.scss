@@ -1,0 +1,26 @@
+$font-size: 1rem;
+
+@mixin font-s($size) {
+    font-size: $size * 0.75;
+    line-height: $size * 1.5;
+}
+
+@mixin font-m($size) {
+    font-size: $size;
+    line-height: $size * 1.75;
+}
+
+@mixin font-l($size) {
+    font-size: $size * 1.25;
+    line-height: $size * 2;
+}
+
+@mixin font-xl($size) {
+    font-size: $size * 1.5;
+    line-height: $size * 2.25;
+}
+
+.heading {
+    @include font-l($font-size);
+    margin-left: $size-16;
+}
