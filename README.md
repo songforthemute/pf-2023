@@ -71,3 +71,9 @@
 -   Fix copyrights
 -   Add heading animation
 -   Fix Font set
+
+---
+
+### Day 9:
+
+-   Refactoring CSS classes
