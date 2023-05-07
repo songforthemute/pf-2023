@@ -1,12 +1,9 @@
-// This is a variable declaration
 // $color: violet;
 
-// This is a mixin definition
 // @mixin border($width) {
 //     border: $width solid black;
 // }
 
-// This is a function definition
 // @function square($number) {
 //     @return $number * $number;
 // }
@@ -31,18 +28,17 @@
 @import "variables.scss";
 
 * {
-    // font-size: 1.2rem;
-    // line-height: 1.2rem * 1.6;
+    // font-size: 1.1rem;
+    // line-height: 1.1rem * 1.6;
     font-family: $font-family;
     color: $white;
 }
 
 body {
     width: 100%;
-    // height: 600vh;
     background-image: url("/imgs/background.jpeg");
     background-size: cover;
-    background-position: top;
+    background-position: bottom;
     background-attachment: fixed;
 
     // background-clip: ;
@@ -55,6 +51,8 @@ body {
     -webkit-backdrop-filter: grayscale(15%) brightness(55%);
     position: relative;
     box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 main {
@@ -114,7 +112,7 @@ main {
 }
 
 .intro {
-    margin: $size-72 auto;
+    margin: $size-80 auto;
 
     @media (max-width: 480px) {
         margin-top: $size-36;
@@ -212,5 +210,69 @@ main {
 .mobile-hide {
     @media (max-width: 480px) {
         display: none;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: $size-4;
+    }
+}
+
+.logo {
+    margin: auto $size-3;
+    height: $size-6;
+    width: auto;
+}
+
+#contact {
+    color: transparent;
+    width: 250%;
+    overflow: hidden;
+    font-size: $size-16;
+    font-weight: 700;
+    -webkit-text-stroke: 2px $lightSlate;
+    white-space: nowrap;
+    will-change: auto;
+    transform: translateX(22rem);
+    animation: sliding 12.5s ease-in-out 0.5s infinite;
+
+    @keyframes sliding {
+        0% {
+            transform: translateX(22rem);
+        }
+        50% {
+            transform: translateX(-36rem);
+        }
+        100% {
+            transform: translateX(22rem);
+        }
+    }
+
+    @media (max-width: 420px) {
+        width: 275%;
+        font-size: $size-12;
+        transform: translateX(8rem);
+        animation: sliding-mobile 12.5s ease-in-out 0.5s infinite;
+    }
+
+    @keyframes sliding-mobile {
+        0% {
+            transform: translateX(8rem);
+        }
+        50% {
+            transform: translateX(-48rem);
+        }
+        100% {
+            transform: translateX(8rem);
+        }
     }
 }

@@ -43,7 +43,7 @@ $headerTitle === null || $headerTitle === void 0 ? void 0 : $headerTitle.addEven
     onClickAdjustScroll();
 });
 $headerAboutButton === null || $headerAboutButton === void 0 ? void 0 : $headerAboutButton.addEventListener("click", function () {
-    onClickAdjustScroll($aboutSection.offsetTop - 100);
+    onClickAdjustScroll($aboutSection.offsetTop - 300);
 });
 $headerProjectButton === null || $headerProjectButton === void 0 ? void 0 : $headerProjectButton.addEventListener("click", function () {
     onClickAdjustScroll($projectSection.offsetTop + 25);
@@ -182,3 +182,20 @@ $carouselImageNext.addEventListener("click", onClickNextImage);
 $carouselContainerPrev.addEventListener("click", onClickPrevContainer);
 // next project button in a project carousel
 $carouselContainerNext.addEventListener("click", onClickNextContainer);
+var $contact = document.getElementById("contact");
+// console.log($contact.style.left);
+// document.addEventListener("scroll", function contactAnimation() {
+//     if (window?.scrollY < $contact.offsetTop - 650) return;
+//     else if (window?.scrollY >= $contact.offsetTop + 350) return;
+//     requestAnimationFrame(() => {
+//         $contact.style.transform = `translateX(${
+//             22 - (window?.scrollY - $contact.offsetTop) / 20
+//         }rem);`;
+//     });
+// });
+// @ts-ignore
+gsap.to("#contact", {
+    left: 1000,
+    // @ts-ignore
+    ease: Power4.easeIn,
+});

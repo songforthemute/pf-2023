@@ -49,7 +49,7 @@ $headerTitle?.addEventListener("click", () => {
     onClickAdjustScroll();
 });
 $headerAboutButton?.addEventListener("click", () => {
-    onClickAdjustScroll($aboutSection.offsetTop - 100);
+    onClickAdjustScroll($aboutSection.offsetTop - 300);
 });
 $headerProjectButton?.addEventListener("click", () => {
     onClickAdjustScroll($projectSection.offsetTop + 25);
@@ -230,3 +230,18 @@ $carouselImageNext.addEventListener("click", onClickNextImage);
 $carouselContainerPrev.addEventListener("click", onClickPrevContainer);
 // next project button in a project carousel
 $carouselContainerNext.addEventListener("click", onClickNextContainer);
+
+const $contact = document.getElementById("contact") as HTMLHeadingElement;
+
+// console.log($contact.style.left);
+
+// document.addEventListener("scroll", function contactAnimation() {
+//     if (window?.scrollY < $contact.offsetTop - 650) return;
+//     else if (window?.scrollY >= $contact.offsetTop + 350) return;
+
+//     requestAnimationFrame(() => {
+//         $contact.style.transform = `translateX(${
+//             22 - (window?.scrollY - $contact.offsetTop) / 20
+//         }rem);`;
+//     });
+// });

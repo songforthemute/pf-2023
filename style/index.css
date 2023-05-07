@@ -164,7 +164,7 @@ body {
   width: 100%;
   background-image: url("/imgs/background.jpeg");
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
   background-attachment: fixed;
   background-clip: border-box;
   backdrop-filter: grayscale(15%) brightness(55%);
@@ -172,6 +172,8 @@ body {
   -webkit-backdrop-filter: grayscale(15%) brightness(55%);
   position: relative;
   box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 main {
@@ -494,7 +496,7 @@ main {
 }
 
 .intro {
-  margin: 18rem auto;
+  margin: 20rem auto;
 }
 @media (max-width: 480px) {
   .intro {
@@ -589,5 +591,43 @@ main {
 @media (max-width: 480px) {
   .mobile-hide {
     display: none;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  margin: auto 0.75rem;
+  height: 1.5rem;
+  width: auto;
+}
+
+#contact {
+  color: transparent;
+  width: 250%;
+  overflow: hidden;
+  font-size: 4rem;
+  font-weight: 700;
+  -webkit-text-stroke: 2px #a8b2d1;
+  white-space: nowrap;
+  will-change: auto;
+  transform: translateX(22rem);
+}
+@media (max-width: 420px) {
+  #contact {
+    width: 275%;
+    font-size: 3rem;
+    transform: translateX(8rem);
   }
 }

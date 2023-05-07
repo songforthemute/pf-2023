@@ -861,8 +861,11 @@
                         <span class="article__li--item font-m font-lightSlate"
                             >개발이 있어 필수적인
                             <u>문제 해결 능력 향상 및 로직 개선</u>을 위해 400개
-                            이상의 알고리즘 문제를 꾸준히 풀며,
+                            이상의<br class="mobile-hide" />알고리즘 문제를
+                            꾸준히 풀며,
                             <a
+                                aria-label="Github repository link"
+                                aria-roledescription="Link to Github repository recording resolved algorithm problems"
                                 class="font-hover font-focus"
                                 href="https://github.com/songforthemute/codingInterview"
                                 target="_blank"
@@ -871,6 +874,8 @@
                                 >Github</a
                             >와
                             <a
+                                aria-label="Medium blog link"
+                                aria-roledescription="Link to Medium Blog"
                                 class="font-hover font-focus"
                                 href="https://medium.com/@songforthemute"
                                 target="_blank"
@@ -883,7 +888,9 @@
                     <li class="article__li">
                         <span class="article__li--item font-m font-lightSlate"
                             >프런트엔드 개발과 연관된 인접 역량도 향상시키기
-                            위해 <u>웹디자인기능사</u>,
+                            위해 <u>웹디자인기능사</u>,<br
+                                class="mobile-hide"
+                            />
                             <u>컴퓨터활용능력1급</u>,
                             <u>GTQ그래픽기술자격1급</u> 등 자격 시험에 꾸준히
                             응시하고 자격을 취득했어요.</span
@@ -891,13 +898,50 @@
                     </li>
                 </ol>
             </section>
+
+            <section
+                class="container"
+                aria-label="Contact me"
+                aria-roledescription="If you want to collaboration with me, contact to me."
+            >
+                <h4 id="contact" class="heading font-left">
+                    함께 일할 프런트엔드 엔지니어가 필요하신가요?
+                </h4>
+            </section>
         </main>
+
+        <hr class="heading" />
 
         <!-- 푸터 부분 -->
         <footer>
-            <!-- SVG: 미디엄 블로그 | 깃허브 | 노션 레쥬메 -->
-            <!-- email -->
-            <!-- 카피라이트 -->
+            <div>
+                <a
+                    aria-label="Github link"
+                    aria-roledescription="Link to Github"
+                    class="font-hover font-focus"
+                    href="https://github.com/songforthemute"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabindex="0"
+                >
+                    <img class="logo" src="imgs/github.png" />
+                </a>
+
+                <a
+                    aria-label="Medium blog link"
+                    aria-roledescription="Link to Medium Blog"
+                    class="font-hover font-focus"
+                    href="https://medium.com/@songforthemute"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    tabindex="0"
+                >
+                    <img class="logo" src="imgs/medium.png" />
+                </a>
+            </div>
+            <div class="font-s font-wh font-center">
+                © 2023 Juheon Lee. All rights reserved.
+            </div>
         </footer>
     </body>
 </html>
