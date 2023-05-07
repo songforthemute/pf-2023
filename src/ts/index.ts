@@ -23,14 +23,16 @@ const $headerTitle = document.querySelector(
     ".header__title"
 ) as HTMLHeadingElement;
 // header buttons: move scroll to the specific position
-const $aboutSection = document.getElementById("about");
-const $projectSection = document.getElementById("project");
-const $articleSection = document.getElementById("article");
-const $skillSection = document.getElementById("skill");
 const $headerAboutButton = document.getElementById("header__about");
 const $headerProjectButton = document.getElementById("header__project");
 const $headerArticleButton = document.getElementById("header__article");
 const $headerSkillButton = document.getElementById("header__skill");
+const $headerOthersButton = document.getElementById("header__others");
+const $aboutSection = document.getElementById("about");
+const $projectSection = document.getElementById("project");
+const $articleSection = document.getElementById("article");
+const $skillSection = document.getElementById("skill");
+const $othersSection = document.getElementById("others");
 
 // scrolling go top
 function onClickAdjustScroll(value: number = 0) {
@@ -57,6 +59,9 @@ $headerArticleButton?.addEventListener("click", () => {
 });
 $headerSkillButton?.addEventListener("click", () => {
     onClickAdjustScroll($skillSection.offsetTop - 100);
+});
+$headerOthersButton?.addEventListener("click", () => {
+    onClickAdjustScroll($othersSection.offsetTop - 100);
 });
 
 // When scrolled down, adjust animation & hide them

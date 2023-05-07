@@ -156,8 +156,6 @@ img {
 }
 
 * {
-  font-size: 1.2rem;
-  line-height: 1.92rem;
   font-family: "Nanum Gothic", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
   color: #e6f1ff;
 }
@@ -400,16 +398,34 @@ main {
   line-height: 1.5675rem;
 }
 .font-m {
-  font-size: 1.21rem;
-  line-height: 2.299rem;
+  font-size: 1.1rem;
+  line-height: 2.09rem;
+}
+@media (max-width: 420px) {
+  .font-m {
+    font-size: 0.99rem;
+    line-height: 1.98rem;
+  }
 }
 .font-l {
-  font-size: 1.65rem;
-  line-height: 3.3rem;
+  font-size: 1.54rem;
+  line-height: 2.926rem;
+}
+@media (max-width: 420px) {
+  .font-l {
+    font-size: 1.375rem;
+    line-height: 2.6125rem;
+  }
 }
 .font-xl {
-  font-size: 2.42rem;
-  line-height: 4.84rem;
+  font-size: 2.31rem;
+  line-height: 4.62rem;
+}
+@media (max-width: 420px) {
+  .font-xl {
+    font-size: 1.98rem;
+    line-height: 3.762rem;
+  }
 }
 .font-wh {
   color: #e6f1ff;
@@ -531,6 +547,14 @@ main {
   margin-top: 8rem;
   margin-bottom: 2rem;
   margin-left: 4rem;
+  margin-right: 4rem;
+}
+@media (max-width: 480px) {
+  .heading {
+    margin-top: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
 
 .container {
@@ -543,11 +567,16 @@ main {
 }
 
 .article__ol {
-  margin-left: 6rem;
+  margin: auto 6rem;
+}
+@media (max-width: 480px) {
+  .article__ol {
+    margin: auto 3rem;
+  }
 }
 .article__li {
   list-style-color: #a8b2d1;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem auto;
 }
 .article__li::before {
   content: "•";
@@ -555,4 +584,10 @@ main {
 }
 .article__li--item {
   text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .mobile-hide {
+    display: none;
+  }
 }

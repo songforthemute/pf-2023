@@ -77,3 +77,4 @@
 ### Day 9:
 
 -   Refactoring CSS classes
+-   Add Others section

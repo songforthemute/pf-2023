@@ -18,14 +18,16 @@ else {
 // header titie logo
 var $headerTitle = document.querySelector(".header__title");
 // header buttons: move scroll to the specific position
-var $aboutSection = document.getElementById("about");
-var $projectSection = document.getElementById("project");
-var $articleSection = document.getElementById("article");
-var $skillSection = document.getElementById("skill");
 var $headerAboutButton = document.getElementById("header__about");
 var $headerProjectButton = document.getElementById("header__project");
 var $headerArticleButton = document.getElementById("header__article");
 var $headerSkillButton = document.getElementById("header__skill");
+var $headerOthersButton = document.getElementById("header__others");
+var $aboutSection = document.getElementById("about");
+var $projectSection = document.getElementById("project");
+var $articleSection = document.getElementById("article");
+var $skillSection = document.getElementById("skill");
+var $othersSection = document.getElementById("others");
 // scrolling go top
 function onClickAdjustScroll(value) {
     if (value === void 0) { value = 0; }
@@ -51,6 +53,9 @@ $headerArticleButton === null || $headerArticleButton === void 0 ? void 0 : $hea
 });
 $headerSkillButton === null || $headerSkillButton === void 0 ? void 0 : $headerSkillButton.addEventListener("click", function () {
     onClickAdjustScroll($skillSection.offsetTop - 100);
+});
+$headerOthersButton === null || $headerOthersButton === void 0 ? void 0 : $headerOthersButton.addEventListener("click", function () {
+    onClickAdjustScroll($othersSection.offsetTop - 100);
 });
 // When scrolled down, adjust animation & hide them
 var $introAnimation = document.getElementById("intro__animation");

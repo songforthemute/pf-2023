@@ -31,8 +31,8 @@
 @import "variables.scss";
 
 * {
-    font-size: 1.2rem;
-    line-height: 1.2rem * 1.6;
+    // font-size: 1.2rem;
+    // line-height: 1.2rem * 1.6;
     font-family: $font-family;
     color: $white;
 }
@@ -169,6 +169,12 @@ main {
     margin-top: $size-32;
     margin-bottom: $size-8;
     margin-left: $size-16;
+    margin-right: $size-16;
+    @media (max-width: 480px) {
+        margin-top: $size-16;
+        margin-left: $size-8;
+        margin-right: $size-8;
+    }
 }
 
 .container {
@@ -182,7 +188,10 @@ main {
 
 .article {
     &__ol {
-        margin-left: $size-24;
+        margin: auto $size-24;
+        @media (max-width: 480px) {
+            margin: auto $size-12;
+        }
     }
 
     &__li {
@@ -192,10 +201,16 @@ main {
             content: "\2022";
             color: $lightSlate;
         }
-        margin-bottom: $size-2;
+        margin: $size-2 auto;
 
         &--item {
             text-decoration: none;
         }
+    }
+}
+
+.mobile-hide {
+    @media (max-width: 480px) {
+        display: none;
     }
 }
