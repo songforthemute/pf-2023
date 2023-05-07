@@ -30,13 +30,21 @@
 
         <header class="header">
             <div>
-                <button class="header__title font-m">songforthemute</button>
+                <button
+                    aria-label="Move to top button"
+                    aria-roledescription="Move to top in document."
+                    class="header__title font-m"
+                >
+                    songforthemute
+                </button>
             </div>
             <nav>
                 <ul class="header__nav--ul">
                     <li>
                         <button
                             id="header__about"
+                            aria-label="Move to About section button"
+                            aria-roledescription="Move to About section in document."
                             class="header__nav--li font-s font-hover"
                         >
                             about
@@ -45,6 +53,8 @@
                     <li>
                         <button
                             id="header__project"
+                            aria-label="Move to Project section button"
+                            aria-roledescription="Move to Project section in document."
                             class="header__nav--li font-s font-hover"
                         >
                             project
@@ -53,6 +63,8 @@
                     <li>
                         <button
                             id="header__article"
+                            aria-label="Move to Article section button"
+                            aria-roledescription="Move to Article section in document."
                             class="header__nav--li font-s font-hover"
                         >
                             article
@@ -61,6 +73,8 @@
                     <li>
                         <button
                             id="header__skill"
+                            aria-label="Move to Skill section button"
+                            aria-roledescription="Move to Skill section in document."
                             class="header__nav--li font-s font-hover"
                         >
                             skill
@@ -69,6 +83,8 @@
                     <li>
                         <button
                             id="header__others"
+                            aria-label="Move to Others section button"
+                            aria-roledescription="Move to Others section in document."
                             class="header__nav--li font-s font-hover"
                         >
                             others
@@ -90,12 +106,22 @@
         <main>
             <section
                 class="intro font-xl font-center"
-                aria-label="Introduce myself 1"
-                aria-details="This is the introduce myself 1"
+                aria-label="Says before introduce myself"
+                aria-roledescription="This is the says before introduce myself."
             >
                 <!-- 1: introduce 1 -->
-                <h1>반갑습니다</h1>
-                <h3>저는 <u>이주헌</u>입니다 :D</h3>
+                <h3
+                    aria-label="Say before introduce myself"
+                    aria-roledescription="Before introduce, glad to meet you."
+                >
+                    반갑습니다
+                </h3>
+                <h4
+                    aria-label="Say before introduce myself"
+                    aria-roledescription="Before introduce, glad to meet you."
+                >
+                    저는 <u>이주헌</u>입니다 :D
+                </h4>
                 <div id="intro__animation" class="intro__animation">👇🏻</div>
             </section>
             <!-- <p class="intro__box intro__paragraph"> -->
@@ -104,7 +130,7 @@
                 <p
                     class="about__right font-l font-right font-keep"
                     aria-label="Introduce 2"
-                    aria-details="This is the introduce myself 2"
+                    aria-roledescription="This is the introduce myself 1"
                 >
                     저는 섬세하고 집요한,<br />직관적인 UI와<br />기억에 남는
                     UX를 만드는<br /><u>프런트엔드 엔지니어</u>입니다.
@@ -112,7 +138,7 @@
                 <p
                     class="about__left font-m font-left font-keep"
                     aria-label="Introduce 3"
-                    aria-details="This is the introduce myself 3"
+                    aria-roledescription="This is the introduce myself 2"
                 >
                     디자인 전공을 접목시켜 프런트엔드 개발 역량을 탄탄히
                     쌓아나갔으며,<br />
@@ -127,16 +153,20 @@
             <!-- 2: projects carousel -->
             <section id="project" class="container">
                 <h3 class="heading font-l font-left font-keep">
-                    저는 이런 <u>프로젝트</u> 경험이 있습니다.
+                    저는 이런 <u>프로젝트</u> 경험이 있어요.
                 </h3>
                 <!--  -->
                 <div
                     class="carousel"
                     role="region"
                     aria-label="Project image carousel"
-                    aria-details="This is the carousel of my projects."
+                    aria-roledescription="This is the carousel of my projects."
                 >
-                    <button class="carousel__project--prev">
+                    <button
+                        class="carousel__project--prev"
+                        aria-label="Show next project button"
+                        aria-roledescription="This is the button that is show next project button in Carousel."
+                    >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -151,7 +181,11 @@
                             />
                         </svg>
                     </button>
-                    <button class="carousel__image--prev">
+                    <button
+                        class="carousel__image--prev"
+                        aria-label="Show next image button"
+                        aria-roledescription="This is the button that is show next image button in Carousel."
+                    >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -173,6 +207,8 @@
                             <h4 class="carousel__heading">
                                 <span>Palette</span>
                                 <a
+                                    aria-label="Deployed project page link button"
+                                    aria-roledescription="Move to deployed project page."
                                     href="https://palette-pi.vercel.app"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -193,6 +229,8 @@
                                     </svg>
                                 </a>
                                 <a
+                                    aria-label="Github page link button"
+                                    aria-roledescription="Move to Github page."
                                     href="https://github.com/songforthemute/palette"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -243,6 +281,8 @@
                             <h4 class="carousel__heading">
                                 <span>Galaxy Market</span>
                                 <a
+                                    aria-label="Deployed project page link button"
+                                    aria-roledescription="Move to deployed project page."
                                     href="https://galaxy-market-rose.vercel.app"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -263,6 +303,8 @@
                                     </svg>
                                 </a>
                                 <a
+                                    aria-label="Github page link button"
+                                    aria-roledescription="Move to Github page."
                                     href="https://github.com/songforthemute/galaxy-market"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -329,6 +371,8 @@
                             <h4 class="carousel__heading">
                                 <span>At Flix</span>
                                 <a
+                                    aria-label="Deployed project page link button"
+                                    aria-roledescription="Move to deployed project page."
                                     href="https://songforthemute.github.io/at-flix"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -349,6 +393,8 @@
                                     </svg>
                                 </a>
                                 <a
+                                    aria-label="Github page link button"
+                                    aria-roledescription="Move to Github page."
                                     href="https://github.com/songforthemute/at-flix"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -410,6 +456,8 @@
                             <h4 class="carousel__heading">
                                 <span>Rello</span>
                                 <a
+                                    aria-label="Deployed project page link button"
+                                    aria-roledescription="Move to deployed project page."
                                     href="https://tsrello.netlify.app"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -430,6 +478,8 @@
                                     </svg>
                                 </a>
                                 <a
+                                    aria-label="Github page link button"
+                                    aria-roledescription="Move to Github page."
                                     href="https://github.com/songforthemute/rello"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -484,6 +534,8 @@
                             <h4 class="carousel__heading">
                                 <span>Coin Track</span>
                                 <a
+                                    aria-label="Deployed project page link button"
+                                    aria-roledescription="Move to deployed project page."
                                     href="https://track-coin-track.netlify.app"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -504,6 +556,8 @@
                                     </svg>
                                 </a>
                                 <a
+                                    aria-label="Github page link button"
+                                    aria-roledescription="Move to Github page."
                                     href="https://github.com/songforthemute/coin_track"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -558,6 +612,8 @@
                             <h4 class="carousel__heading">
                                 <span>Music Tree</span>
                                 <a
+                                    aria-label="Deployed project page link button"
+                                    aria-roledescription="Move to deployed project page."
                                     href="https://songforthemute.github.io/musictree"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -578,6 +634,8 @@
                                     </svg>
                                 </a>
                                 <a
+                                    aria-label="Github page link button"
+                                    aria-roledescription="Move to Github page."
                                     href="https://github.com/songforthemute/musictree"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -630,7 +688,11 @@
                         </li>
                     </ul>
 
-                    <button class="carousel__image--next">
+                    <button
+                        class="carousel__image--next"
+                        aria-label="Show previous image button"
+                        aria-roledescription="This is the button that is show previous image button in Carousel."
+                    >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -646,7 +708,11 @@
                             />
                         </svg>
                     </button>
-                    <button class="carousel__project--next">
+                    <button
+                        class="carousel__project--next"
+                        aria-label="Show previous button"
+                        aria-roledescription="This is the button that is show previous button in Carousel."
+                    >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
@@ -669,16 +735,16 @@
                 id="article"
                 class="container"
                 aria-label="Articles"
-                aria-details="This is the recorded articles that earned by my experience."
+                aria-roledescription="This is the recorded articles that earned by my experience."
             >
                 <h3 class="heading font-l font-left font-keep">
-                    저는 경험으로 배운 것을 <u>기록</u>으로 남기고 있습니다.
+                    저는 경험으로 배운 것을 <u>기록</u>으로 남기고 있어요.
                 </h3>
 
-                <ul class="article__ul">
-                    <li class="article__item">
+                <ol class="article__ol">
+                    <li class="article__li">
                         <a
-                            class="article__item--row"
+                            class="article__li--item font-m font-lightSlate font-hover font-focus"
                             href="https://medium.com/@songforthemute/difference-http-keep-alive-websocket-c0cc19eda40"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -687,9 +753,9 @@
                             HTTP Keep Alive와 WebSocket의 차이
                         </a>
                     </li>
-                    <li class="article__item">
+                    <li class="article__li">
                         <a
-                            class="article__item--row"
+                            class="article__li--item font-m font-lightSlate font-hover font-focus"
                             href="https://medium.com/@songforthemute/configure-typescript-dev-environment-w-code-npm-9d17695ab3a6"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -698,9 +764,9 @@
                             Typescript 개발 환경 설정하기
                         </a>
                     </li>
-                    <li class="article__item">
+                    <li class="article__li">
                         <a
-                            class="article__item--row"
+                            class="article__li--item font-m font-lightSlate font-hover font-focus"
                             href="https://medium.com/@songforthemute/env-variables-are-undefined-in-next-js-57b55d0ffc71"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -709,9 +775,9 @@
                             Next.js 클라이언트 사이드 환경 변수 설정하기
                         </a>
                     </li>
-                    <li class="article__item">
+                    <li class="article__li">
                         <a
-                            class="article__item--row"
+                            class="article__li--item font-m font-lightSlate font-hover font-focus"
                             href="https://medium.com/@songforthemute/generic-arrow-function-in-tsx-111e5824ac47"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -720,56 +786,120 @@
                             화살표 함수의 제네릭 in .tsx
                         </a>
                     </li>
-                </ul>
+                </ol>
             </section>
 
-            <h4 id="skill" class="intro__box intro__left">
-                이런 <u>기술</u>도 사용할 수 있어요.
-            </h4>
-
+            <!-- 3: skill set -->
             <section
+                id="skill"
+                class="container"
                 aria-label="Skillset"
-                aria-details="This is the skills I had."
+                aria-roledescription="This is the skills I had."
             >
-                <!-- 3: skill set => grid -->
-                <ul class="article__box">
-                    <li class="article__item">
-                        <span class="article__item--row"
+                <h4 class="heading font-l font-left font-keep">
+                    저는 이런 <u>기술</u>을 사용할 수 있어요.
+                </h4>
+
+                <ol class="article__ol">
+                    <li class="article__li">
+                        <span class="article__li--item font-m font-lightSlate"
                             >HTML5, CSS3(SCSS), Javascript(ES6+),
                             Typescript</span
                         >
                     </li>
-                    <li class="article__item">
-                        <span class="article__item--row"
+                    <li class="article__li">
+                        <span class="article__li--item font-m font-lightSlate"
                             >React, Next.js, Redux, Recoil</span
                         >
                     </li>
-                    <li class="article__item">
-                        <span class="article__item--row"
+                    <li class="article__li">
+                        <span class="article__li--item font-m font-lightSlate"
                             >Tailwind, Styled-component</span
                         >
                     </li>
-                    <li class="article__item">
-                        <span class="article__item--row"
+                    <li class="article__li">
+                        <span class="article__li--item font-m font-lightSlate"
                             >Node.js(w/ Express.js), Prisma, MongoDB(w/
                             Mongoose)</span
                         >
                     </li>
-                    <li class="article__item">
-                        <span class="article__item--row">Git, Github</span>
+                    <li class="article__li">
+                        <span class="article__li--item font-m font-lightSlate"
+                            >Git, Github</span
+                        >
                     </li>
-                    <li class="article__item">
-                        <span class="article__item--row"
+                    <li class="article__li">
+                        <span class="article__li--item font-m font-lightSlate"
                             >Adobe Creative suites, MS Offices</span
                         >
                     </li>
-                    <li class="article__item">
-                        <span class="article__item--row">Mac OS, Windows</span>
+                    <li class="article__li">
+                        <span class="article__li--item font-m font-lightSlate"
+                            >Mac OS, Windows</span
+                        >
                     </li>
-                </ul>
+                </ol>
             </section>
 
             <!-- 5: other experiences: TIL, Algorithms, qualification -->
+            <section
+                id="others"
+                class="container"
+                aria-label="Others"
+                aria-roledescription="This is the recorded articles that earned by my experience."
+            >
+                <h3 class="heading font-l font-left font-keep">
+                    저는 이런 <u>노력</u>도 하고 있어요.
+                </h3>
+
+                <ol class="article__ol">
+                    <li class="article__li">
+                        <a
+                            class="article__li--item font-m font-lightSlate font-hover font-focus"
+                            href="https://medium.com/@songforthemute/difference-http-keep-alive-websocket-c0cc19eda40"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="0"
+                        >
+                            HTTP Keep Alive와 WebSocket의 차이
+                        </a>
+                    </li>
+                    <li class="article__li">
+                        <a
+                            class="article__li--item font-m font-lightSlate font-hover font-focus"
+                            href="https://medium.com/@songforthemute/configure-typescript-dev-environment-w-code-npm-9d17695ab3a6"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="0"
+                        >
+                            Typescript 개발 환경 설정하기
+                        </a>
+                    </li>
+                    <li class="article__li">
+                        <a
+                            class="article__li--item font-m font-lightSlate font-hover font-focus"
+                            href="https://medium.com/@songforthemute/env-variables-are-undefined-in-next-js-57b55d0ffc71"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="0"
+                        >
+                            Next.js 클라이언트 사이드 환경 변수 설정하기
+                        </a>
+                    </li>
+                    <li class="article__li">
+                        <a
+                            class="article__li--item font-m font-lightSlate font-hover font-focus"
+                            href="https://medium.com/@songforthemute/generic-arrow-function-in-tsx-111e5824ac47"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="0"
+                        >
+                            화살표 함수의 제네릭 in .tsx
+                        </a>
+                    </li>
+                </ol>
+            </section>
+
             <!-- 6: top scroll btn -->
         </main>
 

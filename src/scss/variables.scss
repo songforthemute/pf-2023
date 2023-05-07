@@ -58,6 +58,6 @@ $white: #e6f1ff;
 $black: #3c3c3c;
 // $black: #262626;
 
-$beige: #b0a688;
-$lightBeige: #cfc4a5;
-$lightestBeige: #f1e6c7;
+@mixin text-glow() {
+    text-shadow: 0 0 10px $white;
+}
