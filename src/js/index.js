@@ -193,9 +193,3 @@ var $contact = document.getElementById("contact");
 //         }rem);`;
 //     });
 // });
-// @ts-ignore
-gsap.to("#contact", {
-    left: 1000,
-    // @ts-ignore
-    ease: Power4.easeIn,
-});

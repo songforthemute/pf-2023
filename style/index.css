@@ -566,6 +566,7 @@ main {
   margin-left: 0;
   margin-right: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .article__ol {
@@ -623,11 +624,35 @@ footer > div {
   white-space: nowrap;
   will-change: auto;
   transform: translateX(22rem);
+  animation: sliding 12.5s ease-in-out 0.5s infinite;
+}
+@keyframes sliding {
+  0% {
+    transform: translateX(22rem);
+  }
+  50% {
+    transform: translateX(-36rem);
+  }
+  100% {
+    transform: translateX(22rem);
+  }
 }
 @media (max-width: 420px) {
   #contact {
     width: 275%;
     font-size: 3rem;
+    transform: translateX(8rem);
+    animation: sliding-mobile 12.5s ease-in-out 0.5s infinite;
+  }
+}
+@keyframes sliding-mobile {
+  0% {
+    transform: translateX(8rem);
+  }
+  50% {
+    transform: translateX(-48rem);
+  }
+  100% {
     transform: translateX(8rem);
   }
 }
