@@ -78,3 +78,6 @@
 
 -   Refactoring CSS classes
 -   Add Others section
+-   Add Contact section
+-   Add Contact animation
+-   Add Footer section
