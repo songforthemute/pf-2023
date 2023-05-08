@@ -243,8 +243,8 @@ main {
 }
 .font-focus:focus, .font-hover:hover {
   transition: all 0.5s ease-out;
-  opacity: 0.75;
-  text-shadow: 0 0 0.75rem #e6f1ff;
+  opacity: 0.5;
+  text-shadow: 0 0 10px #e6f1ff;
   color: #e6f1ff;
 }
 
