@@ -91,3 +91,4 @@
 -   Add Resume link
 -   Fix footer style
 -   Fix loading component
+-   Add favicon
