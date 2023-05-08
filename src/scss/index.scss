@@ -224,14 +224,10 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: $size-4;
+        margin-bottom: $size-8;
+        font-family: $font-family;
+        column-gap: $size-4;
     }
-}
-
-.logo {
-    margin: auto $size-3;
-    height: $size-6;
-    width: auto;
 }
 
 #contact {
@@ -243,18 +239,19 @@ footer {
     -webkit-text-stroke: 2px $lightSlate;
     white-space: nowrap;
     will-change: auto;
-    transform: translateX(22rem);
-    animation: sliding 12.5s ease-in-out 0.5s infinite;
+    transform: translateX(28rem);
+    animation: sliding 14.5s ease-in-out 0.5s infinite;
+    margin: $size-32 auto;
 
     @keyframes sliding {
         0% {
-            transform: translateX(22rem);
+            transform: translateX(28rem);
         }
         50% {
             transform: translateX(-36rem);
         }
         100% {
-            transform: translateX(22rem);
+            transform: translateX(28rem);
         }
     }
 
@@ -270,10 +267,38 @@ footer {
             transform: translateX(8rem);
         }
         50% {
-            transform: translateX(-48rem);
+            transform: translateX(-42rem);
         }
         100% {
             transform: translateX(8rem);
         }
+    }
+}
+
+.resume {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    column-gap: $size-8;
+    margin: $size-8 auto;
+    margin-top: $size-16;
+    border-radius: $size-2;
+    border: 2px solid $slate;
+    padding: $size-4 $size-8;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        transition: all 0.5s ease-out;
+        border-color: $slate;
+        background-color: $slate;
+    }
+
+    > hr {
+        width: $size-10;
+        height: 2px;
+        border: none;
+        border-radius: $size-2;
+        background-color: $slate;
     }
 }

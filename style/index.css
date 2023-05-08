@@ -156,7 +156,7 @@ img {
 }
 
 * {
-  font-family: "Nanum Gothic", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Ubuntu", "IBM Plex Sans KR", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
   color: #e6f1ff;
 }
 
@@ -605,13 +605,9 @@ footer > div {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1rem;
-}
-
-.logo {
-  margin: auto 0.75rem;
-  height: 1.5rem;
-  width: auto;
+  margin-bottom: 2rem;
+  font-family: "Ubuntu", "IBM Plex Sans KR", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  column-gap: 1rem;
 }
 
 #contact {
@@ -623,18 +619,19 @@ footer > div {
   -webkit-text-stroke: 2px #a8b2d1;
   white-space: nowrap;
   will-change: auto;
-  transform: translateX(22rem);
-  animation: sliding 12.5s ease-in-out 0.5s infinite;
+  transform: translateX(28rem);
+  animation: sliding 14.5s ease-in-out 0.5s infinite;
+  margin: 8rem auto;
 }
 @keyframes sliding {
   0% {
-    transform: translateX(22rem);
+    transform: translateX(28rem);
   }
   50% {
     transform: translateX(-36rem);
   }
   100% {
-    transform: translateX(22rem);
+    transform: translateX(28rem);
   }
 }
 @media (max-width: 420px) {
@@ -650,9 +647,34 @@ footer > div {
     transform: translateX(8rem);
   }
   50% {
-    transform: translateX(-48rem);
+    transform: translateX(-42rem);
   }
   100% {
     transform: translateX(8rem);
   }
+}
+
+.resume {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 2rem;
+  margin: 2rem auto;
+  margin-top: 4rem;
+  border-radius: 0.5rem;
+  border: 2px solid #8892b0;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+.resume:hover, .resume:focus {
+  transition: all 0.5s ease-out;
+  border-color: #8892b0;
+  background-color: #8892b0;
+}
+.resume > hr {
+  width: 2.5rem;
+  height: 2px;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #8892b0;
 }

@@ -81,3 +81,12 @@
 -   Add Contact section
 -   Add Contact animation
 -   Add Footer section
+
+---
+
+### Day 10:
+
+-   Fix Font-family (Nanum => Ubuntu/IBM Flex)
+-   Fix Contact section
+-   Add Resume link
+-   Fix footer style
