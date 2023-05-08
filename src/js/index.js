@@ -183,13 +183,3 @@ $carouselContainerPrev.addEventListener("click", onClickPrevContainer);
 // next project button in a project carousel
 $carouselContainerNext.addEventListener("click", onClickNextContainer);
 var $contact = document.getElementById("contact");
-// console.log($contact.style.left);
-// document.addEventListener("scroll", function contactAnimation() {
-//     if (window?.scrollY < $contact.offsetTop - 650) return;
-//     else if (window?.scrollY >= $contact.offsetTop + 350) return;
-//     requestAnimationFrame(() => {
-//         $contact.style.transform = `translateX(${
-//             22 - (window?.scrollY - $contact.offsetTop) / 20
-//         }rem);`;
-//     });
-// });

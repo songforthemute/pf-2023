@@ -40,10 +40,6 @@ body {
     background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
-
-    // background-clip: ;
-    // -webkit-background-composite: ;
-    // -webkit-background-origin: ;
     background-clip: border-box;
 
     backdrop-filter: grayscale(15%) brightness(55%);
@@ -60,13 +56,68 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // margin: 0 $size-8;
 }
 
-@import "loading.scss";
-@import "header.scss";
-@import "carousel.scss";
 @import "font.scss";
+@import "carousel.scss";
+
+.loading {
+    &__active {
+        display: flex;
+        flex-direction: column;
+        row-gap: $size-8;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(#000, 0.9);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        margin: auto;
+        z-index: 10;
+        overflow: hidden;
+        animation: fade 3s ease-out forwards;
+    }
+
+    &__circle {
+        width: $size-24;
+        height: $size-24;
+        border: $size-4 solid rgba($slate, 0.35);
+        border-right: $size-4 solid $white;
+        border-radius: 100%;
+        animation: spinner 1s ease-in-out 3, fade 2s ease-out forwards;
+    }
+
+    &__text {
+        animation: fade 2.5s ease-out forwards;
+    }
+
+    @keyframes fade {
+        0% {
+            opacity: 100%;
+        }
+        75% {
+            opacity: 100%;
+        }
+        100% {
+            opacity: 0%;
+        }
+    }
+
+    @keyframes spinner {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    &__complete {
+        display: none;
+    }
+}
 
 .header {
     display: flex;

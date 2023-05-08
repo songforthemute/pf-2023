@@ -90,3 +90,4 @@
 -   Fix Contact section
 -   Add Resume link
 -   Fix footer style
+-   Fix loading component
