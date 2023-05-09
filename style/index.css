@@ -618,19 +618,32 @@ footer > div {
   -webkit-text-stroke: 2px #a8b2d1;
   white-space: nowrap;
   will-change: auto;
-  transform: translateX(28rem);
-  animation: sliding 14.5s ease-in-out 0.5s infinite;
+  transform: translateX(40rem);
+  animation: sliding 15s ease-in-out 0.5s infinite;
   margin: 8rem auto;
+}
+#contact > b {
+  text-decoration: none;
+  color: transparent;
+}
+#contact:hover {
+  transition: all 0.5s ease-out;
+  -webkit-text-stroke-color: #e6f1ff;
+  animation-play-state: paused;
+}
+#contact:hover > b {
+  transition: all 0.5s ease-out;
+  color: #e6f1ff;
 }
 @keyframes sliding {
   0% {
-    transform: translateX(28rem);
+    transform: translateX(40rem);
   }
   50% {
-    transform: translateX(-36rem);
+    transform: translateX(-24rem);
   }
   100% {
-    transform: translateX(28rem);
+    transform: translateX(40rem);
   }
 }
 @media (max-width: 420px) {
