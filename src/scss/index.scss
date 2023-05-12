@@ -77,7 +77,7 @@ main {
         margin: auto;
         z-index: 10;
         overflow: hidden;
-        animation: fade 3s ease-out forwards;
+        animation: fade 1s ease-out 0.5s forwards;
     }
 
     &__circle {
@@ -86,11 +86,12 @@ main {
         border: $size-4 solid rgba($slate, 0.35);
         border-right: $size-4 solid $white;
         border-radius: 100%;
-        animation: spinner 1s ease-in-out 3, fade 2s ease-out forwards;
+        animation: spinner 1s ease-in-out infinite,
+            fade 1s ease-out 0.3s forwards;
     }
 
     &__text {
-        animation: fade 2.5s ease-out forwards;
+        animation: fade 1s ease-out forwards;
     }
 
     @keyframes fade {

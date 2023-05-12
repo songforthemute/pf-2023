@@ -1,33 +1,39 @@
 (function () {
-    console.log("hello world XD");
+    console.log("\n🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦\n🟦 I'm hireable now! 🟦\n🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦\n ");
 })();
-// loading & scroll lock/unlock
-var loadingComponent = document.getElementById("loading");
-if (window === null || window === void 0 ? void 0 : window.sessionStorage.getItem("isVisited")) {
-    loadingComponent.remove();
-}
-else {
-    window === null || window === void 0 ? void 0 : window.sessionStorage.setItem("isVisited", "true");
-    var $body_1 = document.querySelector("body");
-    $body_1.style.overflow = "hidden";
-    setTimeout(function () {
-        loadingComponent.remove();
-        $body_1.style.overflow = "inherit";
-    }, 3000);
-}
+// querySelector Function
+var $ = function (tag) {
+    return document.querySelector(tag);
+};
+// Config Initial State
+var $body = $("body");
+// When initializing, Scroll lock
+$body.style.overflow = "hidden";
+// Check the state of Background image loading
+var bgImage = new Image(0, 0); // <T>: HTMLImageElement
+bgImage.src = "imgs/background.jpeg"; // set image's dir
+bgImage.onload = function () {
+    // Remove Loader & Resolve scroll Lock
+    if (bgImage.complete) {
+        setTimeout(function () {
+            $("#loading").remove();
+            $body.style.overflow = "inherit";
+        }, 1500);
+    }
+};
 // header titie logo
-var $headerTitle = document.querySelector(".header__title");
+var $headerTitle = $(".header__title");
 // header buttons: move scroll to the specific position
-var $headerAboutButton = document.getElementById("header__about");
-var $headerProjectButton = document.getElementById("header__project");
-var $headerArticleButton = document.getElementById("header__article");
-var $headerSkillButton = document.getElementById("header__skill");
-var $headerOthersButton = document.getElementById("header__others");
-var $aboutSection = document.getElementById("about");
-var $projectSection = document.getElementById("project");
-var $articleSection = document.getElementById("article");
-var $skillSection = document.getElementById("skill");
-var $othersSection = document.getElementById("others");
+var $headerAboutButton = $("#header__about");
+var $headerProjectButton = $("#header__project");
+var $headerArticleButton = $("#header__article");
+var $headerSkillButton = $("#header__skill");
+var $headerOthersButton = $("#header__others");
+var $aboutSection = $("#about");
+var $projectSection = $("#project");
+var $articleSection = $("#article");
+var $skillSection = $("#skill");
+var $othersSection = $("#others");
 // scrolling go top
 function onClickAdjustScroll(value) {
     if (value === void 0) { value = 0; }
@@ -58,7 +64,7 @@ $headerOthersButton === null || $headerOthersButton === void 0 ? void 0 : $heade
     onClickAdjustScroll($othersSection.offsetTop - 100);
 });
 // When scrolled down, adjust animation & hide them
-var $introAnimation = document.getElementById("intro__animation");
+var $introAnimation = $("#intro__animation");
 document.addEventListener("scroll", function introAnimation() {
     if (scrollY <= 500) {
         $introAnimation.style.opacity = String(1 - (0.01 * scrollY) / 5);
@@ -70,10 +76,10 @@ document.addEventListener("scroll", function introAnimation() {
     }
 });
 // CAROUSEL PART
-var $carouselImagePrev = document.querySelector(".carousel__image--prev");
-var $carouselImageNext = document.querySelector(".carousel__image--next");
-var $carouselContainerPrev = document.querySelector(".carousel__project--prev");
-var $carouselContainerNext = document.querySelector(".carousel__project--next");
+var $carouselImagePrev = $(".carousel__image--prev");
+var $carouselImageNext = $(".carousel__image--next");
+var $carouselContainerPrev = $(".carousel__project--prev");
+var $carouselContainerNext = $(".carousel__project--next");
 var carouselImageNodes = document.querySelectorAll(".carousel__item--image");
 var carouselBoxNodes = document.querySelectorAll(".carousel__item--box");
 var carouselContainer = {
@@ -182,4 +188,3 @@ $carouselImageNext.addEventListener("click", onClickNextImage);
 $carouselContainerPrev.addEventListener("click", onClickPrevContainer);
 // next project button in a project carousel
 $carouselContainerNext.addEventListener("click", onClickNextContainer);
-var $contact = document.getElementById("contact");

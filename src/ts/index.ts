@@ -1,38 +1,44 @@
-(function () {
-    console.log("hello world XD");
+(() => {
+    console.log(
+        "\n🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦\n🟦 I'm hireable now! 🟦\n🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦\n "
+    );
 })();
 
-// loading & scroll lock/unlock
-const loadingComponent = document.getElementById("loading");
+// querySelector Function
+const $ = (tag: string) =>
+    document.querySelector(tag) as HTMLElement | Element | any;
 
-if (window?.sessionStorage.getItem("isVisited")) {
-    loadingComponent.remove();
-} else {
-    window?.sessionStorage.setItem("isVisited", "true");
-    const $body = document.querySelector("body");
-    $body.style.overflow = "hidden";
+// Config Initial State
+const $body = $("body");
+// When initializing, Scroll lock
+$body.style.overflow = "hidden";
 
-    setTimeout(() => {
-        loadingComponent.remove();
-        $body.style.overflow = "inherit";
-    }, 3000);
-}
+// Check the state of Background image loading
+const bgImage = new Image(0, 0); // <T>: HTMLImageElement
+bgImage.src = "imgs/background.jpeg"; // set image's dir
+bgImage.onload = () => {
+    // Remove Loader & Resolve scroll Lock
+    if (bgImage.complete) {
+        setTimeout(() => {
+            $("#loading").remove();
+            $body.style.overflow = "inherit";
+        }, 1500);
+    }
+};
 
 // header titie logo
-const $headerTitle = document.querySelector(
-    ".header__title"
-) as HTMLHeadingElement;
+const $headerTitle = $(".header__title");
 // header buttons: move scroll to the specific position
-const $headerAboutButton = document.getElementById("header__about");
-const $headerProjectButton = document.getElementById("header__project");
-const $headerArticleButton = document.getElementById("header__article");
-const $headerSkillButton = document.getElementById("header__skill");
-const $headerOthersButton = document.getElementById("header__others");
-const $aboutSection = document.getElementById("about");
-const $projectSection = document.getElementById("project");
-const $articleSection = document.getElementById("article");
-const $skillSection = document.getElementById("skill");
-const $othersSection = document.getElementById("others");
+const $headerAboutButton = $("#header__about");
+const $headerProjectButton = $("#header__project");
+const $headerArticleButton = $("#header__article");
+const $headerSkillButton = $("#header__skill");
+const $headerOthersButton = $("#header__others");
+const $aboutSection = $("#about");
+const $projectSection = $("#project");
+const $articleSection = $("#article");
+const $skillSection = $("#skill");
+const $othersSection = $("#others");
 
 // scrolling go top
 function onClickAdjustScroll(value: number = 0) {
@@ -65,9 +71,7 @@ $headerOthersButton?.addEventListener("click", () => {
 });
 
 // When scrolled down, adjust animation & hide them
-const $introAnimation = document.getElementById(
-    "intro__animation"
-) as HTMLDivElement;
+const $introAnimation = $("#intro__animation");
 
 document.addEventListener("scroll", function introAnimation() {
     if (scrollY <= 500) {
@@ -80,16 +84,12 @@ document.addEventListener("scroll", function introAnimation() {
 });
 
 // CAROUSEL PART
-const $carouselImagePrev = document.querySelector(
-    ".carousel__image--prev"
-) as HTMLButtonElement;
-const $carouselImageNext = document.querySelector(
-    ".carousel__image--next"
-) as HTMLButtonElement;
-const $carouselContainerPrev = document.querySelector(
+const $carouselImagePrev = $(".carousel__image--prev") as HTMLButtonElement;
+const $carouselImageNext = $(".carousel__image--next") as HTMLButtonElement;
+const $carouselContainerPrev = $(
     ".carousel__project--prev"
 ) as HTMLButtonElement;
-const $carouselContainerNext = document.querySelector(
+const $carouselContainerNext = $(
     ".carousel__project--next"
 ) as HTMLButtonElement;
 
@@ -230,5 +230,3 @@ $carouselImageNext.addEventListener("click", onClickNextImage);
 $carouselContainerPrev.addEventListener("click", onClickPrevContainer);
 // next project button in a project carousel
 $carouselContainerNext.addEventListener("click", onClickNextContainer);
-
-const $contact = document.getElementById("contact") as HTMLHeadingElement;
