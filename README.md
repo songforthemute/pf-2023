@@ -1,4 +1,8 @@
-##### HTML, SCSS, Javascript, Typescript, uglify-js, dart-sass
+<img src="https://github.com/songforthemute/pf-2023/assets/105373350/ef0ff44f-1b60-4c5a-8c94-2085b1241c4f" alt="Google Lighthouse inspection" />
+
+## Tech: HTML, SCSS, Javascript, Typescript, uglify-js, dart-sass
+
+
 
 ### Day 1:
 
