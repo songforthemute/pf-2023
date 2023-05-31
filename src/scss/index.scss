@@ -1,37 +1,13 @@
-// $color: violet;
-
-// @mixin border($width) {
-//     border: $width solid black;
-// }
-
-// @function square($number) {
-//     @return $number * $number;
-// }
-
-// body {
-//     font-size: square(6) + px;
-// }
-
-// h1 {
-//     color: $color;
-//     @include border(1px);
-// }
-
-// Issue: modern chromium browsers that don't support
-// *,
-// html,
-// body {
-//     scroll-behavior: smooth !important;
-// }
-
 @import "reset.scss";
 @import "variables.scss";
 
 * {
-    // font-size: 1.1rem;
-    // line-height: 1.1rem * 1.6;
     font-family: $font-family;
     color: $white;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 body {

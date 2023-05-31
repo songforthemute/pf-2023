@@ -160,6 +160,10 @@ img {
   color: #e6f1ff;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   width: 100%;
   background-image: url("/imgs/background.jpeg");
