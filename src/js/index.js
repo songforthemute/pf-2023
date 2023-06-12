@@ -11,7 +11,7 @@ var $body = $("body");
 $body.style.overflow = "hidden";
 // Check the state of Background image loading
 var bgImage = new Image(0, 0); // <T>: HTMLImageElement
-bgImage.src = "imgs/background.jpeg"; // set image's dir
+bgImage.src = "imgs/background.webp"; // set image's dir
 bgImage.onload = function () {
     // Remove Loader & Resolve scroll Lock
     if (bgImage.complete) {
@@ -84,7 +84,7 @@ var carouselImageNodes = document.querySelectorAll(".carousel__item--image");
 var carouselBoxNodes = document.querySelectorAll(".carousel__item--box");
 var carouselContainer = {
     index: 0,
-    imageCount: [3, 6, 5, 4, 4, 4],
+    imageCount: [4, 6, 5, 4, 4, 4],
     getCurrentImageCount: function () {
         return carouselContainer.imageCount[carouselContainer.index];
     },

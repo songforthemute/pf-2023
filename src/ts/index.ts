@@ -15,7 +15,7 @@ $body.style.overflow = "hidden";
 
 // Check the state of Background image loading
 const bgImage = new Image(0, 0); // <T>: HTMLImageElement
-bgImage.src = "imgs/background.jpeg"; // set image's dir
+bgImage.src = "imgs/background.webp"; // set image's dir
 bgImage.onload = () => {
     // Remove Loader & Resolve scroll Lock
     if (bgImage.complete) {
@@ -98,7 +98,7 @@ const carouselBoxNodes = document.querySelectorAll(".carousel__item--box");
 
 const carouselContainer = {
     index: 0,
-    imageCount: [3, 6, 5, 4, 4, 4],
+    imageCount: [4, 6, 5, 4, 4, 4],
     getCurrentImageCount: () =>
         carouselContainer.imageCount[carouselContainer.index],
     getLength: () => carouselContainer.imageCount.length,
