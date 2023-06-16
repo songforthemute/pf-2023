@@ -65,9 +65,11 @@
         &--image {
             display: none;
             transition: all 0.5s ease-out;
+            padding: auto;
 
             > img {
-                width: 55vw;
+                border-radius: $size-2;
+                max-width: 55vw;
                 height: auto;
             }
         }

@@ -84,7 +84,7 @@ var carouselImageNodes = document.querySelectorAll(".carousel__item--image");
 var carouselBoxNodes = document.querySelectorAll(".carousel__item--box");
 var carouselContainer = {
     index: 0,
-    imageCount: [4, 6, 5, 5, 4, 4],
+    imageCount: [4, 7, 5, 5, 4, 4],
     getCurrentImageCount: function () {
         return carouselContainer.imageCount[carouselContainer.index];
     },

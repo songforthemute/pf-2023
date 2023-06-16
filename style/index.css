@@ -311,9 +311,11 @@ main {
 .carousel__item--image {
   display: none;
   transition: all 0.5s ease-out;
+  padding: auto;
 }
 .carousel__item--image > img {
-  width: 55vw;
+  border-radius: 0.5rem;
+  max-width: 55vw;
   height: auto;
 }
 .carousel__item--active {
