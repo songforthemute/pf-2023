@@ -98,7 +98,7 @@ const carouselBoxNodes = document.querySelectorAll(".carousel__item--box");
 
 const carouselContainer = {
     index: 0,
-    imageCount: [4, 7, 5, 5, 4, 4],
+    imageCount: [6, 4, 7, 5, 5, 4, 4],
     getCurrentImageCount: () =>
         carouselContainer.imageCount[carouselContainer.index],
     getLength: () => carouselContainer.imageCount.length,
@@ -107,6 +107,7 @@ const carouselContainer = {
             .slice(0, i ?? carouselContainer.imageCount.length)
             .reduce((pre, cur) => pre + cur, 0),
 };
+
 const carouselImage = {
     index: 0,
     start: 0,
