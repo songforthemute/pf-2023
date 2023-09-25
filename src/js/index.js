@@ -8,13 +8,15 @@ var $ = function (tag) {
 // Config Initial State
 var $body = $("body");
 // When initializing, Scroll lock
-$body.style.overflow = "hidden";
+if ($body) {
+    $body.style.overflow = "hidden";
+}
 // Check the state of Background image loading
 var bgImage = new Image(0, 0); // <T>: HTMLImageElement
 bgImage.src = "imgs/background.webp"; // set image's dir
 bgImage.onload = function () {
     // Remove Loader & Resolve scroll Lock
-    if (bgImage.complete) {
+    if ((bgImage === null || bgImage === void 0 ? void 0 : bgImage.complete) && $body) {
         setTimeout(function () {
             $("#loading").remove();
             $body.style.overflow = "inherit";
@@ -66,13 +68,15 @@ $headerOthersButton === null || $headerOthersButton === void 0 ? void 0 : $heade
 // When scrolled down, adjust animation & hide them
 var $introAnimation = $("#intro__animation");
 document.addEventListener("scroll", function introAnimation() {
-    if (scrollY <= 500) {
-        $introAnimation.style.opacity = String(1 - (0.01 * scrollY) / 5);
-    }
-    else {
-        $introAnimation.style.opacity = "0";
-        $introAnimation.style.animation = "";
-        this.removeEventListener("scroll", introAnimation);
+    if ($introAnimation) {
+        if (scrollY <= 500) {
+            $introAnimation.style.opacity = String(1 - (0.01 * scrollY) / 5);
+        }
+        else {
+            $introAnimation.style.opacity = "0";
+            $introAnimation.style.animation = "";
+            this.removeEventListener("scroll", introAnimation);
+        }
     }
 });
 // CAROUSEL PART
@@ -181,10 +185,10 @@ function onClickPrevContainer() {
     nextImage.classList.add("carousel__item--active");
 }
 // prev slide button in a image carousel in project
-$carouselImagePrev.addEventListener("click", onClickPrevImage);
+$carouselImagePrev === null || $carouselImagePrev === void 0 ? void 0 : $carouselImagePrev.addEventListener("click", onClickPrevImage);
 // next slide button in a image carousel in project
-$carouselImageNext.addEventListener("click", onClickNextImage);
+$carouselImageNext === null || $carouselImageNext === void 0 ? void 0 : $carouselImageNext.addEventListener("click", onClickNextImage);
 // perv project button in a project carousel
-$carouselContainerPrev.addEventListener("click", onClickPrevContainer);
+$carouselContainerPrev === null || $carouselContainerPrev === void 0 ? void 0 : $carouselContainerPrev.addEventListener("click", onClickPrevContainer);
 // next project button in a project carousel
-$carouselContainerNext.addEventListener("click", onClickNextContainer);
+$carouselContainerNext === null || $carouselContainerNext === void 0 ? void 0 : $carouselContainerNext.addEventListener("click", onClickNextContainer);
