@@ -1,3 +1,4 @@
+var _a;
 (function () {
     console.log("\n🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦\n🟦 I'm hireable now! 🟦\n🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦🟦\n ");
 })();
@@ -5,21 +6,27 @@
 var $ = function (tag) {
     return document.querySelector(tag);
 };
+function preventScroll(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+}
 // Config Initial State
 var $body = $("body");
 // When initializing, Scroll lock
-if ($body) {
-    $body.style.overflow = "hidden";
-}
+$body === null || $body === void 0 ? void 0 : $body.addEventListener("wheel", preventScroll, { passive: false });
+(_a = $body === null || $body === void 0 ? void 0 : $body.classList) === null || _a === void 0 ? void 0 : _a.add("overflow__hidden");
 // Check the state of Background image loading
 var bgImage = new Image(0, 0); // <T>: HTMLImageElement
 bgImage.src = "imgs/background.webp"; // set image's dir
 bgImage.onload = function () {
     // Remove Loader & Resolve scroll Lock
-    if ((bgImage === null || bgImage === void 0 ? void 0 : bgImage.complete) && $body) {
+    if (bgImage === null || bgImage === void 0 ? void 0 : bgImage.complete) {
         setTimeout(function () {
+            var _a;
             $("#loading").remove();
-            $body.style.overflow = "inherit";
+            $body === null || $body === void 0 ? void 0 : $body.removeEventListener("wheel", preventScroll);
+            (_a = $body === null || $body === void 0 ? void 0 : $body.classList) === null || _a === void 0 ? void 0 : _a.remove("overflow__hidden");
         }, 1500);
     }
 };

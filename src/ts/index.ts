@@ -8,22 +8,30 @@
 const $ = (tag: string) =>
     document.querySelector(tag) as HTMLElement | Element | any;
 
-// Config Initial State
-const $body = $("body");
-// When initializing, Scroll lock
-if ($body) {
-    $body.style.overflow = "hidden";
+function preventScroll(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    return false;
 }
+
+// Config Initial State
+const $body: HTMLBodyElement = $("body");
+// When initializing, Scroll lock
+
+$body?.addEventListener("wheel", preventScroll, { passive: false });
+$body?.classList?.add("overflow__hidden");
 
 // Check the state of Background image loading
 const bgImage = new Image(0, 0); // <T>: HTMLImageElement
 bgImage.src = "imgs/background.webp"; // set image's dir
 bgImage.onload = () => {
     // Remove Loader & Resolve scroll Lock
-    if (bgImage?.complete && $body) {
+    if (bgImage?.complete) {
         setTimeout(() => {
             $("#loading").remove();
-            $body.style.overflow = "inherit";
+            $body?.removeEventListener("wheel", preventScroll);
+            $body?.classList?.remove("overflow__hidden");
         }, 1500);
     }
 };
